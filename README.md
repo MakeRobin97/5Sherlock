@@ -1,6 +1,7 @@
 # 5Sherlock
 
-- 오설록에 있는 메인페이지, 제품페이지, 제품 상세페이지, 주문, 결제 페이지를 구현
+- 오설록에 있는 메인페이지, 제품페이지, 제품 상세페이지, 주문, 결제 페이지를 구현<br/>
+![image](https://github.com/MakeRobin97/5Sherlock/assets/127472621/98e7e612-4c9e-4218-a256-7e7d9f51fe51)
 
 ### 데모 영상(이미지 클릭)
 [데모영상](https://www.youtube.com/watch?v=-dnFsE2nu9c)
