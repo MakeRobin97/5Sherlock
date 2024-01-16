@@ -2,6 +2,7 @@
   width: 100%;
   cursor: pointer;
   height: 290px;
+
   img {
     max-width: 100%;
     height: 100%;
@@ -18,6 +19,7 @@
 }
 
 .pic {
+  object-fit: cover;
   width: 100%;
   height: 100%;
 

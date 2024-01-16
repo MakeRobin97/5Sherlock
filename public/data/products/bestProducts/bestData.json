@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "productImg": [
+      {
+        "id": 2,
+        "url": "./images/tea/tea2.jpg"
+      },
+
+      {
+        "id": 1,
+        "url": "./images/tea/tea1.jpg"
+      }
+    ],
+    "category": "티 제품",
+    "price": 27000,
+    "originalPrice": 30000,
+    "discountRate": 10,
+    "likeNumber": 77,
+    "reviewNumber": 107,
+    "isNew": true,
+    "quantity": 0,
+    "isLike": true,
+    "name": "우롱차"
+  },
+  {
+    "id": 2,
+    "productImg": [
+      {
+        "id": 2,
+        "url": "./images/tea/tea4.jpg"
+      },
+
+      {
+        "id": 1,
+        "url": "./images/tea/tea3.jpg"
+      }
+    ],
+    "category": "과자 세트",
+    "price": 41000,
+    "originalPrice": 10000,
+    "discountRate": 70,
+    "likeNumber": 123,
+    "reviewNumber": 456,
+    "isNew": false,
+    "quantity": 10,
+    "isLike": false,
+    "name": "과자 세트"
+  },
+  {
+    "id": 3,
+    "productImg": [
+      {
+        "id": 2,
+        "url": "./images/tea/tea6.jpg"
+      },
+
+      {
+        "id": 1,
+        "url": "./images/tea/tea5.jpg"
+      }
+    ],
+    "category": "티 제품",
+    "price": 10000,
+    "originalPrice": 12000,
+    "discountRate": 5,
+    "likeNumber": 77,
+    "reviewNumber": 107,
+    "isNew": true,
+    "quantity": 0,
+    "isLike": true,
+    "name": "쑥차"
+  },
+  {
+    "id": 4,
+    "productImg": [
+      {
+        "id": 2,
+        "url": "./images/tea/tea8.jpg"
+      },
+
+      {
+        "id": 1,
+        "url": "./images/tea/tea7.jpg"
+      }
+    ],
+    "category": "티 제품",
+    "price": 35000,
+    "originalPrice": 35000,
+    "discountRate": 10,
+    "likeNumber": 77,
+    "reviewNumber": 107,
+    "isNew": true,
+    "quantity": 0,
+    "isLike": true,
+    "name": "민들레차"
+  },
+  {
+    "id": 5,
+    "productImg": [
+      {
+        "id": 2,
+        "url": "./images/tea/tea10.jpg"
+      },
+
+      {
+        "id": 1,
+        "url": "./images/tea/tea9.jpg"
+      }
+    ],
+    "category": "티 제품",
+    "price": 27000,
+    "originalPrice": 30000,
+    "discountRate": 10,
+    "likeNumber": 77,
+    "reviewNumber": 107,
+    "isNew": true,
+    "quantity": 0,
+    "isLike": true,
+    "name": "도라지차"
+  },
+  {
+    "id": 6,
+    "productImg": [
+      {
+        "id": 2,
+        "url": "./images/tea/tea12.jpg"
+      },
+
+      {
+        "id": 1,
+        "url": "./images/tea/tea11.jpg"
+      }
+    ],
+    "category": "티 제품",
+    "price": 21000,
+    "originalPrice": 30000,
+    "discountRate": 35,
+    "likeNumber": 77,
+    "reviewNumber": 107,
+    "isNew": true,
+    "quantity": 0,
+    "isLike": true,
+    "name": "스리라차"
+  }
+]

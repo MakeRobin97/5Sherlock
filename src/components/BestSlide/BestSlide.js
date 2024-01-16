@@ -3,18 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import './BestSlide.scss';
 import ProductImgBox from '../../components/ProductImgBox/ProductImgBox';
 const BestSlide = ({ data, onClick }) => {
-  console.log(data);
   const slideWidth = 244;
-  console.log('9');
+
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [translateX, setTranslateX] = useState(0);
   const goToDetail = id => {
-    console.log('10');
     navigate(`/product-detail/${id}`);
   };
   useEffect(() => {
-    console.log('11');
     const intervalId = setInterval(goToNextSlide, 3000);
     return () => clearInterval(intervalId);
   }, []);

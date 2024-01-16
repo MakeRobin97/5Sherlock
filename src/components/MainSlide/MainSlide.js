@@ -11,6 +11,8 @@ const MainSlide = props => {
     return () => clearInterval(intervalId2);
   }, []);
 
+  console.log('렌더링2');
+
   return (
     <div className="MainSlide">
       <ul>
