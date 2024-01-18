@@ -11,8 +11,6 @@ const MainSlide = props => {
     return () => clearInterval(intervalId2);
   }, []);
 
-  console.log('렌더링2');
-
   return (
     <div className="MainSlide">
       <ul>
@@ -20,16 +18,16 @@ const MainSlide = props => {
           <img src="/images/main/main-slide1.png" alt="메인 배너1" />
         </li>
         <li className={1 === currentIndex ? 'active' : ''}>
-          <img src="/images/main/main-slide2.png" alt="메인 배너1" />
+          <img src="/images/main/main-slide2.png" alt="메인 배너2" />
         </li>
         <li className={2 === currentIndex ? 'active' : ''}>
-          <img src="/images/main/main-slide3.png" alt="메인 배너1" />
+          <img src="/images/main/main-slide3.png" alt="메인 배너3" />
         </li>
         <li className={3 === currentIndex ? 'active' : ''}>
-          <img src="/images/main/main-slide4.png" alt="메인 배너1" />
+          <img src="/images/main/main-slide4.png" alt="메인 배너4" />
         </li>
         <li className={4 === currentIndex ? 'active' : ''}>
-          <img src="/images/main/main-slide5.png" alt="메인 배너1" />
+          <img src="/images/main/main-slide5.png" alt="메인 배너5" />
         </li>
       </ul>
     </div>

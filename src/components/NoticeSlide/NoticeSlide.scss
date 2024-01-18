@@ -8,6 +8,7 @@
   span {
     color: #999;
     margin-right: 16px;
+    width: 450px;
   }
   .slideWrapper {
     overflow: hidden;
@@ -19,12 +20,6 @@
         padding: 0 0 4px 0;
         transition: transform 0.5s ease;
       }
-      li.active {
-        //transform: translateY(calc(-14px * var(--currentIndex)));
-      }
     }
   }
-}
-
-.NoticeSlide2 {
 }

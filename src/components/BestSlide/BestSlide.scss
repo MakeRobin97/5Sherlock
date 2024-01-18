@@ -1,67 +1,63 @@
-.BestSlide {
+.back {
+  margin-top: 35px;
   position: relative;
-  padding-top: 48px;
-  .slideContainer {
-    overflow: hidden;
+
+  .leftBtn {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    top: 28%;
+    left: -80px;
+    cursor: pointer;
   }
-  ul {
-    display: flex;
-    justify-content: start;
-    text-align: left;
-    transition-duration: 1000ms;
-    li {
-      width: calc(224px + 20px);
-      transition: transform 0.8s;
-      height: 375px;
-      cursor: pointer;
 
-      .productImgBox {
-        position: relative;
-        width: 224px;
-        height: 250px;
+  .rightBtn {
+    display: block;
+    position: absolute;
+    z-index: 5;
+    top: 28%;
+    right: -80px;
+    transform: scaleX(-1);
+    cursor: pointer;
+  }
 
-        .picCartBox {
-          width: 40px;
-          height: 40px;
-          padding: 8px;
-        }
+  .slick-list {
+    margin: 0 -5px;
+  }
+  .slick-slide > div {
+    padding: 0 5px;
+  }
+  li {
+    width: calc(224px + 20px);
+    height: 375px;
+    cursor: pointer;
+    .box {
+      width: 100%;
+    }
+
+    .productInfo {
+      margin-top: 15px;
+      .bestName {
+        color: #333;
+        margin-bottom: 12px;
+        font-weight: 300;
       }
-      .slideImg {
-        width: 224px;
-        background-color: #ccc;
-        height: 250px;
-        img {
-          width: 100%;
-          display: block;
-        }
+      .originalPrice {
+        font-size: 14px;
+        color: #999;
+        text-decoration: line-through;
       }
-      .productInfo {
-        margin-top: 15px;
-        .bestName {
-          color: #333;
-          margin-bottom: 12px;
-          font-weight: 300;
-        }
-        .originalPrice {
-          font-size: 14px;
-          color: #999;
-          text-decoration: line-through;
-        }
-        .price {
-          margin-top: 6px;
-          font-size: 18px;
-          color: #333;
-          font-weight: bold;
-          .discount {
-            color: #6c801a;
-          }
+      .price {
+        margin-top: 6px;
+        font-size: 18px;
+        color: #333;
+        font-weight: bold;
+        .discount {
+          color: #6c801a;
         }
       }
     }
   }
-  //ul.active {
-  //  transform: translateX(calc(244px * var(--currentIndex)));
-  //}
 
   .slideButton {
     position: absolute;
