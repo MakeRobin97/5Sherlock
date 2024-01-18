@@ -1,54 +1,50 @@
-import React, { useState, useEffect } from 'react';
+import React, { useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './BestSlide.scss';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import ProductImgBox from '../../components/ProductImgBox/ProductImgBox';
 const BestSlide = ({ data, onClick }) => {
-  const slideWidth = 244;
+  const slickRef = useRef(null);
+  const previous = useCallback(() => slickRef.current.slickPrev(), []);
+  const next = useCallback(() => slickRef.current.slickNext(), []);
 
   const navigate = useNavigate();
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [translateX, setTranslateX] = useState(0);
+  console.log(data);
+  const settings = {
+    arrows: true,
+    dots: false, // 페이지 인디케이터 표시 여부
+    infinite: true, // 무한 루프
+    speed: 500, // 애니메이션 속도
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: 5, // 한 번에 표시할 슬라이드 수
+    slidesToScroll: 1, // 한 번에 스크롤할 슬라이드 수
+  };
+
   const goToDetail = id => {
     navigate(`/product-detail/${id}`);
   };
-  useEffect(() => {
-    const intervalId = setInterval(goToNextSlide, 3000);
-    return () => clearInterval(intervalId);
-  }, []);
-  const goToPreviousSlide = () => {
-    console.log('12');
-    setCurrentIndex(prevIndex =>
-      prevIndex === 0 ? data.length - 1 : prevIndex - 1,
-    );
-  };
-  console.log('15');
-  const goToNextSlide = () => {
-    console.log('14');
-    setCurrentIndex(prevIndex =>
-      prevIndex === data.length - 1 ? 0 : prevIndex + 1,
-    );
-  };
-  useEffect(() => {
-    console.log('18');
-    setTranslateX(-currentIndex * slideWidth);
-  }, [currentIndex]);
-  //const duplicatedSlides = [...data, ...data];
-  console.log('20');
+
   return (
-    <div className="BestSlide">
-      <button className="slideButton prevButton" onClick={goToPreviousSlide}>
-        <img src="/images/main/left-arrow.png" alt="슬라이드 왼쪽 이동 버튼" />
-      </button>
-      <div className="slideContainer">
-        <ul
-          className="slideList"
-          style={{
-            width: `${data?.length * slideWidth}px`,
-            transform: `translateX(${translateX}px)`,
-          }}
-        >
-          {data?.map((slide, index) => (
-            <li>
+    <div className="back">
+      <img
+        className="leftBtn"
+        src="./images/leftArrow.png"
+        alt="leftBtn"
+        onClick={previous}
+      />
+      <img
+        className="rightBtn"
+        src="./images/leftArrow.png"
+        alt="rightBtn"
+        onClick={next}
+      />
+      <Slider {...settings} ref={slickRef}>
+        {data?.map((slide, index) => (
+          <li>
+            <div className="box">
               <ProductImgBox data={slide} onClick={onClick} />
               <div
                 className="productInfo"
@@ -65,16 +61,10 @@ const BestSlide = ({ data, onClick }) => {
                   </span>
                 </p>
               </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <button className="slideButton nextButton" onClick={goToNextSlide}>
-        <img
-          src="/images/main/right-arrow.png"
-          alt="슬라이드 오른쪽 이동 버튼"
-        />
-      </button>
+            </div>
+          </li>
+        ))}
+      </Slider>
     </div>
   );
 };
