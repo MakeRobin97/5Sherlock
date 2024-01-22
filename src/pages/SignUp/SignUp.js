@@ -42,12 +42,12 @@ const SignUp = () => {
         } else fieldErrors.name = '이름을 입력하세요';
         break;
       case 'phoneNumber':
-        if (value.length == 10 || value.length == 11) {
+        if (value.length === 10 || value.length === 11) {
           fieldErrors.phoneNumber = '';
         } else fieldErrors.phoneNumber = '휴대폰번호를 입력하세요';
         break;
       case 'birthday':
-        if (value.length == 8) {
+        if (value.length === 8) {
           fieldErrors.birthday = '';
         } else fieldErrors.birthday = '생년월일은 8자리여야 합니다';
         break;
@@ -71,32 +71,38 @@ const SignUp = () => {
     }
     setErrors({ ...errors, ...fieldErrors });
   };
-  const handleSignUp = e => {
-    console.log('사인업');
-    fetch(`${BASE_API}/users/signUp`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-      },
-      body: JSON.stringify({
-        name,
-        phoneNumber,
-        email,
-        password,
-      }),
-    })
-      .then(res => {
-        return res.json();
-      })
-      .then(data => {
-        console.log(123);
-        if (data.message === 'userCreated') {
-          navigate('/login');
-        } else {
-          alert('회원가입에 실패했습니다.');
-        }
-      });
+
+  const handleSignUp = () => {
+    alert('회원가입완료!');
+    navigate('/login');
   };
+
+  // const handleSignUp = e => {
+  //   console.log('사인업');
+  //   fetch(`${BASE_API}/users/signUp`, {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json;charset=utf-8',
+  //     },
+  //     body: JSON.stringify({
+  //       name,
+  //       phoneNumber,
+  //       email,
+  //       password,
+  //     }),
+  //   })
+  //     .then(res => {
+  //       return res.json();
+  //     })
+  //     .then(data => {
+  //       console.log(123);
+  //       if (data.message === 'userCreated') {
+  //         navigate('/login');
+  //       } else {
+  //         alert('회원가입에 실패했습니다.');
+  //       }
+  //     });
+  // };
   const { name, phoneNumber, birthday, email, password, confirmPassword } =
     joinUserInfo;
   const isUserInputValid =
