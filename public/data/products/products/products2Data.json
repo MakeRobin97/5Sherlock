@@ -1,0 +1,90 @@
+{
+  "message": "querySuccess",
+  "data": [
+    {
+      "id": 13,
+      "productImg": [
+        {
+          "id": 1,
+          "url": "./images/tea/tea25.jpg"
+        },
+        {
+          "id": 2,
+          "url": "./images/tea/tea26.jpg"
+        }
+      ],
+      "category": "티 제품",
+      "price": 27000,
+      "likeNumber": 77,
+      "reviewNumber": 107,
+      "isNew": true,
+      "quantity": 0,
+      "isLike": true,
+      "name": "일로향 60g"
+    },
+    {
+      "id": 14,
+      "productImg": [
+        {
+          "id": 1,
+          "url": "./images/tea/tea27.jpg"
+        },
+        {
+          "id": 2,
+          "url": "./images/tea/tea28.jpg"
+        }
+      ],
+      "category": "과자 세트",
+      "price": 75750,
+      "likeNumber": 123,
+      "reviewNumber": 456,
+      "isNew": false,
+      "quantity": 10,
+      "isLike": false,
+      "name": "시그니처 얼그레이 10입"
+    },
+    {
+      "id": 15,
+      "productImg": [
+        {
+          "id": 1,
+          "url": "./images/tea/tea29.jpg"
+        },
+        {
+          "id": 2,
+          "url": "./images/tea/tea30.jpg"
+        }
+      ],
+      "category": "티 제품",
+      "price": 27000,
+      "likeNumber": 77,
+      "reviewNumber": 107,
+      "isNew": true,
+      "quantity": 1,
+      "isLike": true,
+      "name": "제주 쑥차 30g"
+    },
+    {
+      "id": 16,
+      "productImg": [
+        {
+          "id": 1,
+          "url": "./images/tea/tea31.jpg"
+        },
+        {
+          "id": 2,
+          "url": "./images/tea/tea32.jpg"
+        }
+      ],
+      "category": "티 제품",
+      "price": 21000,
+      "likeNumber": 77,
+      "reviewNumber": 107,
+      "isNew": true,
+      "quantity": 3,
+      "isLike": true,
+      "name": "콤부차 깔라망고 30입"
+    }
+  ],
+  "productCount": 16
+}

@@ -31,8 +31,7 @@ const ProductImgBox = ({ data, children, onClick }) => {
         className="picCartBox"
         onClick={e => {
           e.stopPropagation();
-
-          onClick(data.id);
+          onClick(data);
         }}
       >
         <img

@@ -1,0 +1,17 @@
+{
+  "message": "querySuccess",
+  "data": {
+    "name": "삼다연 오리지널 밀크티",
+    "price": 21600,
+    "description": "마스터의 블렌딩으로 탄생한 오설록만의 제주의 향기를 담은 대표 블렌디드 티 모음 세트",
+    "provideBag": true,
+    "packageService": true,
+    "categoryName": "티 세트",
+    "categoryId": 1,
+    "productImage": "/images/tea/tea7.jpg",
+    "rating": "4.8",
+    "isNew": true,
+    "quantity": 1,
+    "id": 1
+  }
+}

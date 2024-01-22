@@ -1,0 +1,19 @@
+{
+  "message": "querySuccess",
+  "data": {
+    "name": "삼다연 제주영귤 20입",
+    "price": 36000,
+    "originalPrice": 30000,
+    "discountRate": 10,
+    "description": "깊은 로스팅 풍미의 제주 화산섬 반발효차입니다. 제주 차밭의 맛과 향을 가벼운 가격으로 즐겨보세요.",
+    "provideBag": true,
+    "packageService": true,
+    "categoryName": "티 세트",
+    "categoryId": 1,
+    "productImage": "/images/tea/tea17.jpg",
+    "rating": "4.8",
+    "isNew": true,
+    "quantity": 1,
+    "id": 1
+  }
+}

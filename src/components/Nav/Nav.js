@@ -8,18 +8,28 @@ const Nav = () => {
   const [cartNumber, setCartNumber] = useState(0);
   const [openCheck, setOpenCheck] = useState('unclicked');
 
-  const getCartCount = async () => {
-    const response = await fetch(`${BASE_API}/carts/count`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        authorization: window.localStorage.getItem('token'),
-      },
-    });
-    const result = await response.json();
-    console.log(result.cartItemCount);
-    setCartNumber(result.cartItemCount);
+  const getCartCount = () => {
+    if (!window.localStorage.getItem('localCartList')) {
+      setCartNumber(0);
+    } else {
+      const result = window.localStorage.getItem('localCartList');
+      setCartNumber(JSON.parse(result).length);
+    }
   };
+
+  // const getCartCount = () => {
+  //   fetch(`${BASE_API}/carts/count`, {
+  //     method: 'GET',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //       authorization: window.localStorage.getItem('token'),
+  //     },
+  //   })
+  //     .then(res => res.json())
+  //     .then(result => {
+  //       setCartNumber(result.cartItemCount);
+  //     });
+  // };
 
   useEffect(() => {
     getCartCount();
@@ -271,7 +281,7 @@ const Nav = () => {
                           </div>
                           <div className="openNavPic">
                             <img
-                              src={process.env.PUBLIC_URL + '/images/1.jpg'}
+                              src={process.env.PUBLIC_URL + '/images/7.jpg'}
                             />
                           </div>
                         </div>

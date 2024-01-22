@@ -16,7 +16,7 @@ const ProductListContainer = ({ data, onClick }) => {
     console.log(id);
     console.log(isLike);
     if (!localStorage.getItem('accessToken')) {
-      return alert('로그인부터 하고와~');
+      return alert('로그인 해주세요');
     }
 
     if (data.isLike === false) {
@@ -49,13 +49,13 @@ const ProductListContainer = ({ data, onClick }) => {
   };
 
   if (!data) {
-    return;
+    return null;
   }
 
   return (
     <div className="productListContainer">
-      {data.map(data => (
-        <ProductListCard key={data.id} data={data} onClick={onClick} />
+      {data.map(d => (
+        <ProductListCard key={d.id} data={d} onClick={onClick} />
       ))}
     </div>
   );

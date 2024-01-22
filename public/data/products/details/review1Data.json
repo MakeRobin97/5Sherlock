@@ -1,0 +1,27 @@
+{
+  "message": "quarySuccess",
+  "data": {
+    "reviewsList": [
+      {
+        "id": 1,
+        "content": "마실수록 중독되는 느낌이에요",
+        "rating": 4.8,
+        "url": "/images/review/reviewImage.jpg",
+        "createdAt": "2024.01.05",
+        "authorId": 1,
+        "authorName": "차매니아"
+      },
+      {
+        "id": 2,
+        "content": "겨울에 너무 좋아요.",
+        "rating": 2.5,
+        "url": "/images/review/reviewImage.jpg",
+        "createdAt": "2023.09.30",
+        "authorId": 1,
+        "authorName": "단풍잎"
+      }
+    ],
+    "reviewsCount": 2,
+    "averageRating": 4.5
+  }
+}

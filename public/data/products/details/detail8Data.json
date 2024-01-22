@@ -1,0 +1,17 @@
+{
+  "message": "querySuccess",
+  "data": {
+    "name": "가루 녹차",
+    "price": 27000,
+    "description": "달콤하게 즐기는 블렌디드 루이보스차입니다. 티백으로 간편하게, 합리적인 가격으로 즐겨보세요.",
+    "provideBag": true,
+    "packageService": true,
+    "categoryName": "티 세트",
+    "categoryId": 1,
+    "productImage": "/images/tea/tea15.jpg",
+    "rating": "4.8",
+    "isNew": true,
+    "quantity": 1,
+    "id": 1
+  }
+}

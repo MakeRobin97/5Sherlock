@@ -5,16 +5,15 @@ import BestProductListCard from '../BestProductListCard/BestProductListCard';
 
 const BestProductListContainer = ({ data, onClick }) => {
   if (!data) {
-    return;
+    return null;
   }
-
   return (
     <div className="bestProductListContainer">
-      {data.map((data, index) => (
+      {data.map((d, index) => (
         <BestProductListCard
           index={index}
-          key={data.id}
-          data={data}
+          key={d.id}
+          data={d}
           onClick={onClick}
         />
       ))}

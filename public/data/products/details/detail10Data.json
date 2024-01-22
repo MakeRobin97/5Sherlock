@@ -1,0 +1,19 @@
+{
+  "message": "querySuccess",
+  "data": {
+    "name": "웨딩 그린티 10입",
+    "price": 21600,
+    "originalPrice": 27000,
+    "discountRate": 20,
+    "description": "제주만의 특별함을 담아내어 블렌딩한 프리미엄 티백 라인입니다. 새콤달콤한 여러 과실향의 제품을 다양하게 즐길 수 있는 세트입니다.",
+    "provideBag": true,
+    "packageService": true,
+    "categoryName": "티 세트",
+    "categoryId": 1,
+    "productImage": "/images/tea/tea19.jpg",
+    "rating": "4.8",
+    "isNew": true,
+    "quantity": 1,
+    "id": 1
+  }
+}

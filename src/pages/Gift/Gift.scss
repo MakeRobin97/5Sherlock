@@ -1,0 +1,293 @@
+.gift {
+  display: flex;
+  justify-content: center;
+
+  .rightSection {
+    width: 350px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .paymentBox1 {
+    position: sticky;
+    top: 145px;
+    margin-top: 100px;
+    width: 280px;
+    height: 161px;
+    border: 1px solid #333;
+    border-radius: 12px;
+    font-size: 14px;
+    .totalAmount {
+      padding: 20px 20px 0;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #e6e6e6;
+      font-size: 14px;
+      color: #333;
+    }
+    .finalPayment {
+      padding: 20px 20px 0;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #e6e6e6;
+      font-size: 18px;
+      color: #333;
+      font-weight: bold;
+    }
+    .payment {
+      color: #6c801a;
+      font-weight: bold;
+    }
+
+    .btnPayment {
+      width: 100%;
+      padding: 20px 0;
+      background-color: #6c801a;
+      color: #fff;
+      border-radius: 0 0 11px 11px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  input {
+    width: 250px;
+    height: 40px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    padding-left: 10px;
+  }
+
+  .select {
+    width: 100px;
+    height: 40px;
+    padding: 0 24px 0 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  h2 {
+    font-size: 20px;
+  }
+  span {
+    font-size: 16px;
+    font-weight: 300;
+    color: #6c801a;
+  }
+}
+.inputWrapper {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.inputTitle {
+  display: block;
+  width: 100px;
+}
+.gift {
+  color: #333;
+
+  .cardBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cardList {
+    display: flex;
+    gap: 12px;
+    padding: 15px 0;
+  }
+
+  .cardSingle {
+    width: 70px;
+    height: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .cardSingle.selected {
+    border: 3px solid #6c801a;
+  }
+
+  .card {
+    width: 100%;
+    height: 430px;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 55px;
+  }
+  .cardContentBox {
+    width: 420px;
+    position: relative;
+    overflow: hidden;
+    .letterNumber {
+      position: absolute;
+      bottom: 25px;
+      right: 25px;
+    }
+  }
+
+  .imageRoll {
+    display: flex;
+    transition: transform ease-out 0.3s;
+    height: 100%;
+  }
+
+  .cardPic {
+    display: block;
+    width: 420px;
+    height: 220px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .writeSection {
+    border: none;
+    outline: none;
+    resize: none;
+    width: 100%;
+    padding: 25px;
+    height: 120px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow:
+      0 5px 5px rgba(0, 0, 0, 0.19),
+      0 3px 3px rgba(0, 0, 0, 0.23);
+  }
+
+  .giftInner {
+    .orderTitle {
+      width: 100%;
+      h1 {
+        font-size: 32px;
+        padding: 60px 0 30px;
+        color: #333;
+      }
+    }
+    .orderContainerWrapper {
+      width: 860px;
+      border-top: 2px solid #333;
+      .orderUserInfo {
+        padding: 0 20px 60px 20px;
+        .orderInfoInput {
+          margin-top: 40px;
+          .userName {
+            input {
+              width: 100%;
+              height: 40px;
+            }
+          }
+        }
+        .userNotice {
+          display: flex;
+          justify-content: end;
+          .noticeInner {
+            font-size: 13px;
+            background-color: #f6f6f6;
+            padding: 30px;
+            width: 730px;
+            .noticeText {
+              color: #999;
+              margin-bottom: 12px;
+            }
+            .noticeEx {
+              color: #333;
+            }
+          }
+        }
+      }
+      .deliveryRequest {
+        width: 100%;
+        background-color: #f6f6f6;
+        padding: 24px 24px 30px;
+        .text {
+          padding-bottom: 20px;
+        }
+        .requestSelect {
+          width: 100%;
+          height: 40px;
+          padding-left: 12px;
+          border-radius: 3px;
+          border: 1px solid #e5e5e5;
+        }
+      }
+      .orderAddressInfo {
+        border-top: 2px solid #333;
+        padding: 0 20px 0px 20px;
+        .oderAddressInput {
+          padding: 40px 0 40px 0;
+        }
+        .title {
+          padding-bottom: 20px;
+        }
+      }
+      .orderProductInfo {
+        padding: 60px 0 20px 0;
+        .title {
+          padding: 20px 20px;
+        }
+        .orderList {
+          padding: 0 20px;
+          li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 20px;
+            border-top: 1px solid #e6e6e6;
+            border-bottom: 1px solid #e6e6e6;
+            .productImgWrapper {
+              display: flex;
+              align-items: center;
+              .productImg {
+                width: 150px;
+                object-fit: cover;
+                margin-right: 20px;
+
+                img {
+                  display: block;
+                  width: 100%;
+                  border-radius: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .payWay {
+        .title {
+          padding: 0 20px 40px;
+        }
+        .payWayImg {
+          width: 800px;
+          margin: 20px auto;
+          border: 1px solid silver;
+          img {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+      .purchaseConsent {
+        padding: 40px 0;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        .consentSelect {
+          width: 30px;
+          height: 30px;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

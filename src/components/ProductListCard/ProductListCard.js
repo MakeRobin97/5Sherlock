@@ -12,21 +12,6 @@ const ProductListCard = ({ data, onClick }) => {
     navigate(`/product-detail/${id}`);
   };
 
-  // const likeClick= (param) => {
-  //   fetch('http://10.58.52.96:8000/users/signup', {
-  //       method: param,
-  //       headers: {
-  //         'Content-Type': 'application/json;charset=utf-8',
-  //       },
-  //       body: JSON.stringify({
-  //         id: id,
-  //         accessToken: localStorage.getItem('token'),
-  //       }),
-  //     }).then(() => {
-  //       setChange(!change);
-  //     });
-  // }
-
   const clickLike = (id, isLike) => {
     if (!localStorage.getItem('token')) {
       return alert('로그인이 필요합니다.');
@@ -60,17 +45,6 @@ const ProductListCard = ({ data, onClick }) => {
       });
     }
   };
-
-  // const showSecondPage = () => {
-  //   setProductImg(data.productImg[1].url);
-  // };
-  // const showFirstPage = () => {
-  //   setProductImg(data.productImg[0].url);
-  // };
-
-  // const goToOrderBox = () => {
-  //   navigate('/orderbox');
-  // };
 
   return (
     <div className="productListCard">
@@ -108,12 +82,7 @@ const ProductListCard = ({ data, onClick }) => {
       </div>
       <div className="interactionBox">
         <div className="likeBox">
-          <div
-            className="likeBtn"
-            // onClick={() => {
-            //   clickLike(data.id, data.isLike);
-            // }}
-          >
+          <div className="likeBtn">
             {data.isLike ? (
               <img
                 className="likeBtnImg"

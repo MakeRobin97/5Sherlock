@@ -1,0 +1,266 @@
+{
+  "message": "querySuccess",
+  "data": [
+    {
+      "id": 1,
+      "productImg": [
+        {
+          "id": 1,
+          "url": "./images/tea/tea1.jpg"
+        },
+        {
+          "id": 2,
+          "url": "./images/tea/tea2.jpg"
+        }
+      ],
+      "category": "티 제품",
+      "price": 27000,
+      "originalPrice": 30000,
+      "discountRate": 10,
+      "likeNumber": 77,
+      "reviewNumber": 107,
+      "isNew": true,
+      "quantity": 1,
+      "isLike": true,
+      "name": "[따뜻한 한가위 선물] 달빛걷기 세트"
+    },
+    {
+      "id": 2,
+      "productImg": [
+        {
+          "id": 1,
+          "url": "./images/tea/tea3.jpg"
+        },
+        {
+          "id": 2,
+          "url": "./images/tea/tea4.jpg"
+        }
+      ],
+      "category": "과자 세트",
+      "price": 20000,
+      "likeNumber": 123,
+      "reviewNumber": 456,
+      "isNew": false,
+      "quantity": 10,
+      "isLike": false,
+      "name": "그린티 라떼 더블샷"
+    },
+    {
+      "id": 3,
+      "productImg": [
+        {
+          "id": 1,
+          "url": "./images/tea/tea5.jpg"
+        },
+        {
+          "id": 2,
+          "url": "./images/tea/tea6.jpg"
+        }
+      ],
+      "category": "티 제품",
+      "price": 21000,
+      "likeNumber": 77,
+      "reviewNumber": 107,
+      "isNew": true,
+      "quantity": 1,
+      "isLike": true,
+      "name": "덖음차 50g"
+    },
+    {
+      "id": 4,
+      "productImg": [
+        {
+          "id": 1,
+          "url": "./images/tea/tea7.jpg"
+        },
+        {
+          "id": 2,
+          "url": "./images/tea/tea8.jpg"
+        }
+      ],
+      "category": "티 제품",
+      "price": 21600,
+      "likeNumber": 77,
+      "reviewNumber": 107,
+      "isNew": true,
+      "quantity": 3,
+      "isLike": true,
+      "name": "삼다연 오리지널 밀크티"
+    },
+    {
+      "id": 5,
+      "productImg": [
+        {
+          "id": 1,
+          "url": "./images/tea/tea9.jpg"
+        },
+        {
+          "id": 2,
+          "url": "./images/tea/tea10.jpg"
+        }
+      ],
+      "category": "티 제품",
+      "price": 21000,
+      "originalPrice": 28000,
+      "discountRate": 25,
+      "likeNumber": 77,
+      "reviewNumber": 107,
+      "isNew": true,
+      "quantity": 1,
+      "isLike": true,
+      "name": "동백이 피는 곶자왈 20입"
+    },
+    {
+      "id": 6,
+      "productImg": [
+        {
+          "id": 1,
+          "url": "./images/tea/tea11.jpg"
+        },
+        {
+          "id": 2,
+          "url": "./images/tea/tea12.jpg"
+        }
+      ],
+      "category": "티 제품",
+      "price": 53300,
+      "likeNumber": 77,
+      "reviewNumber": 107,
+      "isNew": false,
+      "quantity": 0,
+      "isLike": true,
+      "name": "삼다 꿀배 티"
+    },
+    {
+      "id": 7,
+      "productImg": [
+        {
+          "id": 1,
+          "url": "./images/tea/tea13.jpg"
+        },
+        {
+          "id": 2,
+          "url": "./images/tea/tea14.jpg"
+        }
+      ],
+      "category": "티 제품",
+      "price": 53300,
+      "originalPrice": 65000,
+      "discountRate": 18,
+      "likeNumber": 77,
+      "reviewNumber": 107,
+      "isNew": false,
+      "quantity": 1,
+      "isLike": true,
+      "name": "산호섬 아이스티"
+    },
+    {
+      "id": 8,
+      "productImg": [
+        {
+          "id": 1,
+          "url": "./images/tea/tea15.jpg"
+        },
+        {
+          "id": 2,
+          "url": "./images/tea/tea16.jpg"
+        }
+      ],
+      "category": "티 제품",
+      "price": 27000,
+      "likeNumber": 77,
+      "reviewNumber": 107,
+      "isNew": true,
+      "quantity": 0,
+      "isLike": true,
+      "name": "가루 녹차"
+    },
+    {
+      "id": 9,
+      "productImg": [
+        {
+          "id": 1,
+          "url": "./images/tea/tea17.jpg"
+        },
+        {
+          "id": 2,
+          "url": "./images/tea/tea18.jpg"
+        }
+      ],
+      "category": "티 제품",
+      "price": 36000,
+      "likeNumber": 77,
+      "reviewNumber": 107,
+      "isNew": true,
+      "quantity": 1,
+      "isLike": true,
+      "name": "삼다연 제주영귤 20입"
+    },
+    {
+      "id": 10,
+      "productImg": [
+        {
+          "id": 1,
+          "url": "./images/tea/tea19.jpg"
+        },
+        {
+          "id": 2,
+          "url": "./images/tea/tea20.jpg"
+        }
+      ],
+      "category": "티 제품",
+      "price": 21600,
+      "originalPrice": 27000,
+      "discountRate": 20,
+      "likeNumber": 77,
+      "reviewNumber": 107,
+      "isNew": true,
+      "quantity": 1,
+      "isLike": true,
+      "name": "웨딩 그린티 10입"
+    },
+    {
+      "id": 11,
+      "productImg": [
+        {
+          "id": 1,
+          "url": "./images/tea/tea21.jpg"
+        },
+        {
+          "id": 2,
+          "url": "./images/tea/tea22.jpg"
+        }
+      ],
+      "category": "티 제품",
+      "price": 53300,
+      "likeNumber": 77,
+      "reviewNumber": 107,
+      "isNew": true,
+      "quantity": 1,
+      "isLike": true,
+      "name": "달빛걷기 3입"
+    },
+    {
+      "id": 12,
+      "productImg": [
+        {
+          "id": 1,
+          "url": "./images/tea/tea23.jpg"
+        },
+        {
+          "id": 2,
+          "url": "./images/tea/tea24.jpg"
+        }
+      ],
+      "category": "티 제품",
+      "price": 45750,
+      "likeNumber": 77,
+      "reviewNumber": 107,
+      "isNew": true,
+      "quantity": 1,
+      "isLike": true,
+      "name": "레드파파야 블랙티 3입"
+    }
+  ],
+  "productCount": 16
+}

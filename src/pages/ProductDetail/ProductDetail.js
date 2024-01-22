@@ -7,57 +7,9 @@ import ProductReview from '../../components/ProductReview/ProductReview';
 import BASE_API from '../../config';
 import './ProductDetail.scss';
 
-const DUMMY_PRODUCT_DATA = {
-  name: '시크릿 티',
-  price: 77000,
-  originalPrice: 80000,
-  discountRate: 20,
-  description:
-    '즐겁고 행복한 티타임을 선사하는 달콤하고 향긋한 오설록만의 특별한 블렌디드 티 선물 세트',
-  provideBag: true,
-  packageService: true,
-  categoryName: '티 세트',
-  categoryId: 1,
-  productImage: '/images/product-img1.png',
-  token: 'dd',
-  rating: '4.8',
-  isNew: true,
-  quantity: 1,
-  id: 1,
-};
-
-const DUMMY_REVIEW_DATA = {
-  message: 'quarySuccess',
-  data: {
-    reviewsList: [
-      {
-        id: 1,
-        content: '1번차 좋아요',
-        rating: 4.8,
-        url: '/images/review/reviewImage.jpg',
-        createdAt: '2023.09.30',
-        authorId: 1,
-        authorName: '오셜록',
-      },
-      {
-        id: 1,
-        content: '1번차 좋아요',
-        rating: 2.5,
-        url: '/images/review/reviewImage.jpg',
-        createdAt: '2023.09.30',
-        authorId: 1,
-        authorName: '오셜록',
-      },
-    ],
-    reviewsCount: 60,
-    averageRating: 4.5,
-  },
-};
-
 const ProductDetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-
   const [data, setData] = useState({});
   const [review, setReview] = useState({});
   const [handleSelectToggle, sethandleSelectToggle] = useState(false);
@@ -72,26 +24,21 @@ const ProductDetail = () => {
   const offset = searchParams.get('offset');
 
   const getDetailList = () => {
-    fetch(`${BASE_API}/products/${id}`, {
+    fetch(`${BASE_API}/products/details/detail${id}Data.json`, {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-        authorization: localStorage.getItem('token'),
+        'Content-Type': 'application/json',
+        authorization: window.localStorage.getItem('token'),
       },
     })
       .then(res => res.json())
       .then(result => {
         setData(result.data);
-
-        if (result.message === 'querySuccess') {
-        } else {
-          alert('실패');
-        }
       });
   };
 
   const getReview = () => {
-    fetch(`${BASE_API}/products/${id}/reviews`, {
+    fetch(`${BASE_API}/products/details/review1Data.json`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
@@ -100,15 +47,9 @@ const ProductDetail = () => {
     })
       .then(res => res.json())
       .then(result => {
-        console.log('오냐?');
         setReview(result.data);
-        if (result.message === 'querySuccess') {
-        } else {
-          alert('실패');
-        }
       });
   };
-
   useEffect(() => {
     getDetailList();
     getReview();
@@ -153,51 +94,83 @@ const ProductDetail = () => {
     setIsCartModalOpen(false);
   };
 
-  const postCart = async id => {
+  const postCart = () => {
     if (!window.localStorage.getItem('token')) {
       alert('로그인을 해주세요.');
       return;
     }
 
-    const response = await fetch(`${BASE_API}/carts`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        authorization: window.localStorage.getItem('token'),
-      },
-      body: JSON.stringify({ productId: id, quantity: 1 }),
-    });
+    const cartListData = {
+      id: data.id,
+      name: data.name,
+      img: data.productImage,
+      price: data.price,
+      quantity: productCount,
+    };
 
-    if (response.ok) {
+    const storedCartList =
+      JSON.parse(window.localStorage.getItem('localCartList')) || [];
+
+    const isDuplicate = storedCartList.some(
+      item => item.id === cartListData.id,
+    );
+
+    if (!isDuplicate) {
+      storedCartList.push(cartListData);
+
+      window.localStorage.setItem(
+        'localCartList',
+        JSON.stringify(storedCartList),
+      );
+      alert('장바구니에 담겼습니다!');
       window.location.reload();
+    } else {
+      alert('이미 담긴 상품이에요');
     }
   };
+
+  // const postCart = async id => {
+  //   if (!window.localStorage.getItem('token')) {
+  //     alert('로그인을 해주세요.');
+  //     return;
+  //   }
+
+  //   const response = await fetch(`${BASE_API}/carts`, {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //       authorization: window.localStorage.getItem('token'),
+  //     },
+  //     body: JSON.stringify({ productId: id, quantity: 1 }),
+  //   });
+
+  //   if (response.ok) {
+  //     window.location.reload();
+  //   }
+  // };
 
   const goCart = () => {
     navigate('/cart');
   };
-
-  const pointReward = data.originalPrice / 100;
 
   const goLogin = () => {
     navigate('/login');
   };
 
   const order = () => {
-    const items = [{ id: data.id, quantity: productCount }];
-    navigate('/order', { state: { items, cart: false } });
+    // const items = [{ id: data.id, quantity: productCount }];
+
+    window.localStorage.setItem('localOrderList', JSON.stringify([data]));
+    navigate('/order');
   };
 
-  // const quary = [{ id: data.id, quantity: productCount }];
-  // const goToPosts = () =>
-  //   navigate({
-  //     pathname: '/order',
-  //     search: `?${setSearchParams(quary)}&cart=false`,
-  //   });
+  if (Object.keys(data).length === 0) return null;
+  console.log(data);
 
-  console.log(review);
-  // console.log(review.reviewsCount);
-  // console.log(review.reviewsList);
+  const goGift = () => {
+    window.localStorage.setItem('localGiftList', JSON.stringify([data]));
+    navigate('/gift');
+  };
 
   return (
     <div className="productDetail">
@@ -214,7 +187,7 @@ const ProductDetail = () => {
                     : ''
                 }`}</p>
                 <img
-                  src={`${data.productImages}`}
+                  src={`${data.productImage}`}
                   alt="제품상세 시크릿 티세트 이미지"
                 />
               </div>
@@ -224,7 +197,7 @@ const ProductDetail = () => {
                     <i>
                       <img src="/images/icon-coin.png" alt="적립 아이콘" />
                     </i>
-                    {`뷰티포인트 ${pointReward}P 적립`}
+                    {`뷰티포인트 ${data.originalPrice / 100}P 적립`}
                   </li>
                   <li className="toTeaPoint">
                     <i>
@@ -233,7 +206,7 @@ const ProductDetail = () => {
                         alt="무료배송 아이콘"
                       />
                     </i>
-                    {`찻잎 ${pointReward}P 적립`}
+                    {`찻잎 ${data.originalPrice / 100}P 적립`}
                   </li>
                   <li className="toDeliveryFree">
                     <i>
@@ -327,8 +300,13 @@ const ProductDetail = () => {
                     원
                   </span>
                 </span>
-                <span className="discount"> {data.discountRate}%</span>
-                <span className="lineText">{data.originalPrice}</span>
+
+                {data.discountRate && (
+                  <>
+                    <span className="discount"> {data.discountRate}%</span>
+                    <span className="lineText">{data.originalPrice}</span>
+                  </>
+                )}
               </p>
             </div>
             <div className="productSeletWrapper">
@@ -403,13 +381,10 @@ const ProductDetail = () => {
               </span>
             </div>
             <div className="btnDecision">
-              <button className="btnGift">선물하기</button>
-              <button
-                className="btnBasket"
-                // onClick={() => {
-                //   setIsCartModalOpen(true);
-                // }}
-              >
+              <button className="btnGift" onClick={goGift}>
+                선물하기
+              </button>
+              <button className="btnBasket" onClick={postCart}>
                 장바구니
               </button>
               <button

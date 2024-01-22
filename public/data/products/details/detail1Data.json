@@ -1,0 +1,19 @@
+{
+  "message": "querySuccess",
+  "data": {
+    "name": "[따뜻한 한가위 선물] 달빛걷기 세트",
+    "price": 27000,
+    "originalPrice": 30000,
+    "discountRate": 10,
+    "description": "즐겁고 행복한 티타임을 선사하는 달콤하고 향긋한 오설록만의 특별한 블렌디드 티 선물 세트",
+    "provideBag": true,
+    "packageService": true,
+    "categoryName": "티 세트",
+    "categoryId": 1,
+    "productImage": "/images/tea/tea1.jpg",
+    "rating": "4.8",
+    "isNew": true,
+    "quantity": 1,
+    "id": 1
+  }
+}

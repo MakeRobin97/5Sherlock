@@ -23,31 +23,46 @@ const Login = () => {
       clearErrorMessage();
     }
   };
+  // const handleLogin = e => {
+  //   e.preventDefault();
+  //   fetch(`${BASE_API}/users/signIn`, {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json;charset=utf-8',
+  //     },
+  //     body: JSON.stringify({
+  //       email,
+  //       password,
+  //     }),
+  //   })
+  //     .then(res => {
+  //       return res.json();
+  //     })
+  //     .then(result => {
+  //       if (result.message === 'signInSuccess' && result.token) {
+  //         localStorage.setItem('token', result.token);
+  //         navigate('/');
+  //         window.location.reload();
+  //       } else {
+  //         setErrorMessage('아이디 또는 비밀번호가 맞지 않습니다.');
+  //       }
+  //     });
+  // };
+
   const handleLogin = e => {
     e.preventDefault();
-    fetch(`${BASE_API}/users/signIn`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json;charset=utf-8',
-      },
-      body: JSON.stringify({
-        email,
-        password,
+    localStorage.setItem('token', 'testoken');
+    localStorage.setItem(
+      'info',
+      JSON.stringify({
+        name: '박로빈',
+        email: email,
+        phone: '010-8908-4135',
       }),
-    })
-      .then(res => {
-        return res.json();
-      })
-      .then(result => {
-        if (result.message === 'signInSuccess' && result.token) {
-          localStorage.setItem('token', result.token);
-          navigate('/');
-          window.location.reload();
-        } else {
-          setErrorMessage('아이디 또는 비밀번호가 맞지 않습니다.');
-        }
-      });
+    );
+    navigate('/');
   };
+
   const clearErrorMessage = () => {
     setErrorMessage('');
   };
@@ -77,7 +92,6 @@ const Login = () => {
               placeholder="이메일 입력"
               name="email"
               onChange={saveUserInfo}
-              onFocus={clearErrorMessage}
             />
             <Input
               scale="first"
@@ -85,35 +99,16 @@ const Login = () => {
               type="password"
               name="password"
               onChange={saveUserInfo}
-              onFocus={clearErrorMessage}
             />
             <div className="error">{errorMessage}</div>
           </form>
           <button
             className="loginButton"
             onClick={handleLogin}
-            // disabled={!isUserInputValid}
+            disabled={!isUserInputValid}
           >
             로그인
           </button>
-          <div className="snsLogin">
-            <div className="phoneLogin">
-              휴대폰
-              <br />
-              로그인
-            </div>
-            <div className="kakaoLogin">
-              카카오
-              <br />
-              로그인
-            </div>
-            <div className="naverLogin">
-              네이버
-              <br />
-              로그인
-            </div>
-            <div className="moreLogin">더보기</div>
-          </div>
           <div className="joinButton" onClick={() => navigate('/signup')}>
             <span className="a">아직 회원이 아니세요?</span>
             <span className="b">회원가입 &gt; </span>

@@ -1,0 +1,17 @@
+{
+  "message": "querySuccess",
+  "data": {
+    "name": "레드파파야 블랙티 3입",
+    "price": 45750,
+    "description": "한라산의 화산암석층이 키워낸 구수한 풍미의 반발효차",
+    "provideBag": true,
+    "packageService": true,
+    "categoryName": "티 세트",
+    "categoryId": 1,
+    "productImage": "/images/tea/tea23.jpg",
+    "rating": "4.8",
+    "isNew": true,
+    "quantity": 1,
+    "id": 1
+  }
+}

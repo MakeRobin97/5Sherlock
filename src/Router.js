@@ -11,6 +11,7 @@ import ProductList from './pages/Product/ProductList/ProductList';
 import Cart from './pages/Cart/Cart';
 import Footer from './components/Footer/Footer';
 import Order from './pages/Order/Order';
+import Gift from './pages/Gift/Gift';
 
 const Router = () => {
   return (
@@ -26,6 +27,7 @@ const Router = () => {
         <Route path="/product-list" element={<ProductList />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/order" element={<Order />} />
+        <Route path="/gift" element={<Gift />} />
       </Routes>
       <Footer />
     </BrowserRouter>

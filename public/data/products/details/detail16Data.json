@@ -1,0 +1,19 @@
+{
+  "message": "querySuccess",
+  "data": {
+    "name": "콤부차 깔라망고 30입",
+    "price": 27000,
+    "originalPrice": 30000,
+    "discountRate": 10,
+    "description": "제주 왕벚꽃향의 화사함에 달콤새콤한 과실향이 어우러진 블렌디드티를 소중한 사람에게 선물해보세요.",
+    "provideBag": true,
+    "packageService": true,
+    "categoryName": "티 세트",
+    "categoryId": 1,
+    "productImage": "/images/tea/tea31.jpg",
+    "rating": "4.8",
+    "isNew": true,
+    "quantity": 1,
+    "id": 1
+  }
+}

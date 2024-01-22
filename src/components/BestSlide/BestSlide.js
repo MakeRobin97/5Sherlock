@@ -43,7 +43,7 @@ const BestSlide = ({ data, onClick }) => {
       />
       <Slider {...settings} ref={slickRef}>
         {data?.map((slide, index) => (
-          <li>
+          <li key={slide.id}>
             <div className="box">
               <ProductImgBox data={slide} onClick={onClick} />
               <div
@@ -53,12 +53,17 @@ const BestSlide = ({ data, onClick }) => {
                 }}
               >
                 <p className="bestName">{slide.name}</p>
-                <span className="originalPrice">{slide.originalPrice}원</span>
+                {slide.originalPrice && (
+                  <span className="originalPrice">{slide.originalPrice}원</span>
+                )}
                 <p className="price">
-                  {slide.price}원
-                  <span className="discount">
-                    &nbsp;&nbsp;{slide.discountRate}%
-                  </span>
+                  {slide.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+                  원
+                  {slide.discountRate && (
+                    <span className="discount">
+                      &nbsp;&nbsp;{slide.discountRate}%
+                    </span>
+                  )}
                 </p>
               </div>
             </div>

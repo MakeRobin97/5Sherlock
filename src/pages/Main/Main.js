@@ -34,29 +34,64 @@ const Main = () => {
     getList();
   }, []);
 
-  const postCart = async id => {
+  const postCart = data => {
     if (!window.localStorage.getItem('token')) {
       alert('로그인을 해주세요.');
       return;
     }
-    if (window.confirm('장바구니에 담으시겠습니까?')) {
-      const response = await fetch(`${BASE_API}/carts`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          authorization: window.localStorage.getItem('token'),
-        },
-        body: JSON.stringify({ productId: id, quantity: 1 }),
-      });
-      if (response.ok) {
-        window.location.reload();
-      }
+
+    const cartListData = {
+      id: data.id,
+      name: data.name,
+      img: data.productImg[1].url,
+      price: data.price,
+      quantity: 1,
+    };
+
+    const storedCartList =
+      JSON.parse(window.localStorage.getItem('localCartList')) || [];
+
+    const isDuplicate = storedCartList.some(
+      item => item.id === cartListData.id,
+    );
+
+    if (!isDuplicate) {
+      storedCartList.push(cartListData);
+
+      window.localStorage.setItem(
+        'localCartList',
+        JSON.stringify(storedCartList),
+      );
+      alert('장바구니에 담겼습니다!');
+      window.location.reload();
+    } else {
+      alert('이미 담긴 상품이에요');
     }
   };
 
+  // const postCart = async id => {
+  //   if (!window.localStorage.getItem('token')) {
+  //     alert('로그인을 해주세요.');
+  //     return;
+  //   }
+  //   if (window.confirm('장바구니에 담으시겠습니까?')) {
+  //     const response = await fetch(`${BASE_API}/carts`, {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //         authorization: window.localStorage.getItem('token'),
+  //       },
+  //       body: JSON.stringify({ productId: id, quantity: 1 }),
+  //     });
+  //     if (response.ok) {
+  //       window.location.reload();
+  //     }
+  //   }
+  // };
+
   // 제품 리스트 페이지로 이동
   const goToProductList = () => {
-    navigate('/BestProductList');
+    navigate('/best-product-list');
   };
 
   return (
@@ -71,7 +106,7 @@ const Main = () => {
             <div className="slideCate">
               <h1>오늘은 어떤 차를 마셔볼까요?</h1>
               <p className="btnCate">
-                <button className="btnCateBest">베스트</button>
+                <button className="btnCateBest">위클리 베스트</button>
               </p>
             </div>
             {bestData ? <BestSlide data={bestData} onClick={postCart} /> : ''}

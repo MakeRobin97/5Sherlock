@@ -7,37 +7,6 @@ import './ProductReview.scss';
 
 const ProductReview = props => {
   const { reviewsList, reviewsCount, averageRating, onClick, offset } = props;
-  const [maskedUserId, setMaskedUserId] = useState(''); // 마스킹된 아이디 상태
-  console.log(`리뷰 리스트 : ${reviewsList}`);
-  console.log(`리뷰 카운트 : ${reviewsCount}`);
-
-  // console.log(onClick);
-  // console.log(offset);
-  // const getList = async () => {
-  //   return await fetch(
-  //     `${BASE_API}/products?${searchParams.toString()}`,
-  //     {
-  //       method: 'GET',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //         authorization: window.sessionStorage.getItem('token'),
-  //       },
-  //     },
-  //   )
-  //     .then(res => res.json())
-  //     .then(data => {
-  //       setData(data);
-  //     });
-  // };
-
-  // useEffect(() => {
-  //   if (reviewsList.authorName.length > 0) {
-  //     const maskedId =
-  //       reviewsList.authorName.substring(0, 2) +
-  //       '*'.repeat(reviewsList.authorName.length - 2);
-  //     setMaskedUserId(maskedId);
-  //   }
-  // }, [reviewsList]);
 
   return (
     <div className="ProductReview">
@@ -66,22 +35,21 @@ const ProductReview = props => {
         <div className="reviewList">
           <div className="listInner">
             {reviewsList?.map(info => (
-              <div className="reviewList">
+              <div className="reviewList" key={info.id}>
                 <div className="dateAndGrade">
-                  <p className="date">{info.updatedAt}</p>
-                  <p className="grade">
+                  <div className="date">{info.updatedAt}</div>
+                  <div className="grade">
                     <StarRating data={info.rating} />
-                  </p>
+                  </div>
                 </div>
                 <div className="idAndreviewText">
                   <p className="useId">
-                    <span className={`${info.authorId}`}>구매자 </span>
-                    {maskedUserId}
+                    <span className={`${info.authorId}`}>
+                      {' '}
+                      {info.authorName}
+                    </span>
                   </p>
                   <p className="reviewText">{info.content}</p>
-                  <p className="reviewImg">
-                    <img src={`${info.url}`} />
-                  </p>
                 </div>
               </div>
             ))}

@@ -9,6 +9,10 @@ const Pagination = ({
   pageLength,
   pageProductNumber,
 }) => {
+  const MoveToTop = () => {
+    window.scrollTo({ top: 250 });
+  };
+
   const [searchParams, setSearchParams] = useSearchParams();
 
   let page = 1;
@@ -46,7 +50,7 @@ const Pagination = ({
     searchParams.set('offset', param);
     searchParams.set('limit', pageProductNumber);
     setSearchParams(searchParams);
-    onClick();
+    MoveToTop();
   };
 
   return (

@@ -1,0 +1,17 @@
+{
+  "message": "querySuccess",
+  "data": {
+    "name": "일로향 60g",
+    "price": 27000,
+    "description": "제주 차밭의 어린 찻잎으로 만든 작설차",
+    "provideBag": true,
+    "packageService": true,
+    "categoryName": "티 세트",
+    "categoryId": 1,
+    "productImage": "/images/tea/tea25.jpg",
+    "rating": "4.8",
+    "isNew": true,
+    "quantity": 1,
+    "id": 1
+  }
+}

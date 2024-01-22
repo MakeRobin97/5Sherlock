@@ -1,0 +1,19 @@
+{
+  "message": "querySuccess",
+  "data": {
+    "name": "산호섬 아이스티",
+    "price": 53300,
+    "originalPrice": 65000,
+    "discountRate": 18,
+    "description": "붉은 장미와 달콤한 파파야가 곁들여진 화려한 풍미의 홍차를 처음 접하시거나 다양한 차를 조금씩 맛보고 싶으시다면, 3입 제품으로 합리적인 가격에 체험해보세요.",
+    "provideBag": true,
+    "packageService": true,
+    "categoryName": "티 세트",
+    "categoryId": 1,
+    "productImage": "/images/tea/tea3.jpg",
+    "rating": "4.8",
+    "isNew": true,
+    "quantity": 1,
+    "id": 1
+  }
+}

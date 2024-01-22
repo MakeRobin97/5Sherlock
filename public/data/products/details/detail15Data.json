@@ -1,0 +1,17 @@
+{
+  "message": "querySuccess",
+  "data": {
+    "name": "제주 쑥차 30g",
+    "price": 27000,
+    "description": "오설록의 시그니처 티를 모두 경험할 수 있는 프리미엄 선물 세트",
+    "provideBag": true,
+    "packageService": true,
+    "categoryName": "티 세트",
+    "categoryId": 1,
+    "productImage": "/images/tea/tea29.jpg",
+    "rating": "4.8",
+    "isNew": true,
+    "quantity": 1,
+    "id": 1
+  }
+}

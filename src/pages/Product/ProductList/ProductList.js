@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import { Link } from 'react-scroll';
 import ProductListContainer from '../../../components/ProductListContainer/ProductListContainer';
 import WhiteFilterButton from '../../../components/WhiteFilterButton/WhiteFilterButton';
 import GreenFilterButton from '../../../components/GreenFilterButton/GreenFilterButton';
@@ -16,45 +17,79 @@ const ProductList = () => {
   const sort = searchParams.get('sort');
   const product_type = searchParams.get('product_type');
 
-  const getList = async () => {
-    const response = await fetch(
-      // `/data/listData.json`,
-      `${BASE_API}/products?${searchParams.toString()}`,
-      {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          authorization: window.sessionStorage.getItem('token'),
-        },
-      },
-    );
+  const getList = () => {
+    const fileName =
+      offset !== '12' ? 'products1Data.json' : 'products2Data.json';
 
-    const result = await response.json();
-    // setDataList(result.data);
-    setDataList(result);
+    const response = fetch(`${BASE_API}/products/products/${fileName}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        authorization: window.sessionStorage.getItem('token'),
+      },
+    })
+      .then(res => res.json())
+      .then(data => {
+        setDataList(data);
+      });
   };
 
-  const postCart = async id => {
+  const postCart = data => {
     if (!window.localStorage.getItem('token')) {
       alert('로그인을 해주세요.');
       return;
     }
 
-    if (window.confirm('장바구니에 담으시겠습니까?')) {
-      const response = await fetch(`${BASE_API}/carts`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          authorization: window.localStorage.getItem('token'),
-        },
-        body: JSON.stringify({ productId: id, quantity: 1 }),
-      });
+    const cartListData = {
+      id: data.id,
+      name: data.name,
+      img: data.productImg[1].url,
+      price: data.price,
+      quantity: 1,
+    };
 
-      if (response.ok) {
-        window.location.reload();
-      }
+    const storedCartList =
+      JSON.parse(window.localStorage.getItem('localCartList')) || [];
+
+    const isDuplicate = storedCartList.some(
+      item => item.id === cartListData.id,
+    );
+
+    if (!isDuplicate) {
+      storedCartList.push(cartListData);
+
+      window.localStorage.setItem(
+        'localCartList',
+        JSON.stringify(storedCartList),
+      );
+      alert('장바구니에 담겼습니다!');
+      window.location.reload();
+    } else {
+      alert('이미 담긴 상품이에요');
     }
   };
+
+  // const postCart = async id => {
+  //   if (!window.localStorage.getItem('token')) {
+  //     alert('로그인을 해주세요.');
+  //     return;
+  //   }
+
+  //   if (window.confirm('장바구니에 담으시겠습니까?')) {
+  //     const response = await fetch(`${BASE_API}/carts`, {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //         authorization: window.localStorage.getItem('token'),
+  //       },
+  //       body: JSON.stringify({ productId: id, quantity: 1 }),
+  //     });
+
+  //     if (response.ok) {
+  //       window.location.reload();
+  //     }
+  //   }
+  // };
 
   useEffect(() => {
     getList();
@@ -295,7 +330,11 @@ const ProductList = () => {
                   </div>
                 ) : null}
               </div>
-              <ProductListContainer data={dataList.data} onClick={postCart} />
+              <ProductListContainer
+                id="refContainer"
+                data={dataList.data}
+                onClick={postCart}
+              />
               <Pagination
                 productCount={dataList.productCount}
                 onClick={getList}

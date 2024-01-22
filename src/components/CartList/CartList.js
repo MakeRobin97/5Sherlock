@@ -46,34 +46,27 @@ const CartList = ({
       }
     }
   }
-  // console.log(selectedData);
-  // const selectedDataToSend = selectedData.map(item => ({
-  //   id: item.id,
-  //   quantity: item.quantity,
-  // }));
-  // console.log(selectedDataToSend);
+
   console.log(cartList);
   return (
     <>
       {cartList.map(item => (
-        <div className="cartList" key={item.productId}>
+        <div className="cartList" key={item.id}>
           <input
             className="checkBox"
             type="checkbox"
-            checked={selectedItems[item.productId] || false}
-            onChange={() => handleCheckboxChange(item.productId)}
+            checked={selectedItems[item.id] || false}
+            onChange={() => handleCheckboxChange(item.id)}
           />
           <div className="imgBox">
-            <img className="image" src={item.url} alt={item.name} />
+            <img className="image" src={item.img} alt={item.name} />
           </div>
           <div className="itemInfo">
             <div className="itemName">{item.name}</div>
-            <div className="packingItem">{item.package}</div>
-            <div className="presentItem">{item.present}</div>
           </div>
           <div className="countPrice">
             <Counter
-              itemId={item.productId}
+              itemId={item.id}
               quantity={item.quantity}
               onQuantityChange={handleCounterChange}
             />

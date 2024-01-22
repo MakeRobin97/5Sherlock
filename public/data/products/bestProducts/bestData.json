@@ -3,13 +3,12 @@
     "id": 1,
     "productImg": [
       {
-        "id": 2,
-        "url": "./images/tea/tea2.jpg"
-      },
-
-      {
         "id": 1,
         "url": "./images/tea/tea1.jpg"
+      },
+      {
+        "id": 2,
+        "url": "./images/tea/tea2.jpg"
       }
     ],
     "category": "티 제품",
@@ -19,128 +18,159 @@
     "likeNumber": 77,
     "reviewNumber": 107,
     "isNew": true,
-    "quantity": 0,
+    "quantity": 1,
     "isLike": true,
-    "name": "우롱차"
-  },
-  {
-    "id": 2,
-    "productImg": [
-      {
-        "id": 2,
-        "url": "./images/tea/tea4.jpg"
-      },
-
-      {
-        "id": 1,
-        "url": "./images/tea/tea3.jpg"
-      }
-    ],
-    "category": "과자 세트",
-    "price": 41000,
-    "originalPrice": 10000,
-    "discountRate": 70,
-    "likeNumber": 123,
-    "reviewNumber": 456,
-    "isNew": false,
-    "quantity": 10,
-    "isLike": false,
-    "name": "과자 세트"
+    "name": "[따뜻한 한가위 선물] 달빛걷기 세트"
   },
   {
     "id": 3,
     "productImg": [
       {
-        "id": 2,
-        "url": "./images/tea/tea6.jpg"
-      },
-
-      {
         "id": 1,
         "url": "./images/tea/tea5.jpg"
-      }
-    ],
-    "category": "티 제품",
-    "price": 10000,
-    "originalPrice": 12000,
-    "discountRate": 5,
-    "likeNumber": 77,
-    "reviewNumber": 107,
-    "isNew": true,
-    "quantity": 0,
-    "isLike": true,
-    "name": "쑥차"
-  },
-  {
-    "id": 4,
-    "productImg": [
+      },
       {
         "id": 2,
-        "url": "./images/tea/tea8.jpg"
-      },
-
-      {
-        "id": 1,
-        "url": "./images/tea/tea7.jpg"
+        "url": "./images/tea/tea6.jpg"
       }
     ],
     "category": "티 제품",
-    "price": 35000,
-    "originalPrice": 35000,
-    "discountRate": 10,
+    "price": 21000,
     "likeNumber": 77,
     "reviewNumber": 107,
     "isNew": true,
-    "quantity": 0,
+    "quantity": 1,
     "isLike": true,
-    "name": "민들레차"
+    "name": "덖음차 50g"
   },
   {
     "id": 5,
     "productImg": [
       {
-        "id": 2,
-        "url": "./images/tea/tea10.jpg"
-      },
-
-      {
         "id": 1,
         "url": "./images/tea/tea9.jpg"
-      }
-    ],
-    "category": "티 제품",
-    "price": 27000,
-    "originalPrice": 30000,
-    "discountRate": 10,
-    "likeNumber": 77,
-    "reviewNumber": 107,
-    "isNew": true,
-    "quantity": 0,
-    "isLike": true,
-    "name": "도라지차"
-  },
-  {
-    "id": 6,
-    "productImg": [
+      },
       {
         "id": 2,
-        "url": "./images/tea/tea12.jpg"
-      },
-
-      {
-        "id": 1,
-        "url": "./images/tea/tea11.jpg"
+        "url": "./images/tea/tea10.jpg"
       }
     ],
     "category": "티 제품",
     "price": 21000,
-    "originalPrice": 30000,
-    "discountRate": 35,
+    "originalPrice": 28000,
+    "discountRate": 25,
+    "likeNumber": 77,
+    "reviewNumber": 107,
+    "isNew": true,
+    "quantity": 1,
+    "isLike": true,
+    "name": "동백이 피는 곶자왈 20입"
+  },
+  {
+    "id": 7,
+    "productImg": [
+      {
+        "id": 1,
+        "url": "./images/tea/tea13.jpg"
+      },
+      {
+        "id": 2,
+        "url": "./images/tea/tea14.jpg"
+      }
+    ],
+    "category": "티 제품",
+    "price": 53300,
+    "originalPrice": 65000,
+    "discountRate": 18,
+    "likeNumber": 77,
+    "reviewNumber": 107,
+    "isNew": false,
+    "quantity": 1,
+    "isLike": true,
+    "name": "산호섬 아이스티"
+  },
+  {
+    "id": 9,
+    "productImg": [
+      {
+        "id": 1,
+        "url": "./images/tea/tea17.jpg"
+      },
+      {
+        "id": 2,
+        "url": "./images/tea/tea18.jpg"
+      }
+    ],
+    "category": "티 제품",
+    "price": 36000,
+    "likeNumber": 77,
+    "reviewNumber": 107,
+    "isNew": true,
+    "quantity": 1,
+    "isLike": true,
+    "name": "삼다연 제주영귤 20입"
+  },
+  {
+    "id": 11,
+    "productImg": [
+      {
+        "id": 1,
+        "url": "./images/tea/tea21.jpg"
+      },
+      {
+        "id": 2,
+        "url": "./images/tea/tea22.jpg"
+      }
+    ],
+    "category": "티 제품",
+    "price": 53300,
+    "likeNumber": 77,
+    "reviewNumber": 107,
+    "isNew": true,
+    "quantity": 1,
+    "isLike": true,
+    "name": "달빛걷기 3입"
+  },
+  {
+    "id": 13,
+    "productImg": [
+      {
+        "id": 1,
+        "url": "./images/tea/tea25.jpg"
+      },
+      {
+        "id": 2,
+        "url": "./images/tea/tea26.jpg"
+      }
+    ],
+    "category": "티 제품",
+    "price": 27000,
     "likeNumber": 77,
     "reviewNumber": 107,
     "isNew": true,
     "quantity": 0,
     "isLike": true,
-    "name": "스리라차"
+    "name": "일로향 60g"
+  },
+  {
+    "id": 15,
+    "productImg": [
+      {
+        "id": 1,
+        "url": "./images/tea/tea29.jpg"
+      },
+      {
+        "id": 2,
+        "url": "./images/tea/tea30.jpg"
+      }
+    ],
+    "category": "티 제품",
+    "price": 27000,
+    "likeNumber": 77,
+    "reviewNumber": 107,
+    "isNew": true,
+    "quantity": 1,
+    "isLike": true,
+    "name": "제주 쑥차 30g"
   }
 ]

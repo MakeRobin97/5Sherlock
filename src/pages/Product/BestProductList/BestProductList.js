@@ -12,271 +12,87 @@ const BestProductList = () => {
   const [filter, setFilter] = useState('closed');
   const [filterResult, setFilterResult] = useState('판매순');
   const [searchParams, setSearchParams] = useSearchParams();
-  const data = {
-    message: 'querySuccess',
-    data: [
-      {
-        id: 999,
-        productImg: [
-          {
-            id: 2,
-            url: 'https://image.osulloc.com/upload/kr/ko/adminImage/NK/UF/304_20221114150238508QK.png',
-          },
-
-          {
-            id: 1,
-            url: 'https://image.osulloc.com/upload/kr/ko/adminImage/HW/AQ/304_20220921131344082JD.png',
-          },
-        ],
-        category: '티 제품',
-        price: 27000,
-        originalPrice: 30000,
-        discountRate: 10,
-        likeNumber: 77,
-        reviewNumber: 107,
-        isNew: true,
-        quantity: 0,
-        isLike: true,
-        name: '[따뜻한 한가위 선물] 달빛걷기 세트',
-      },
-      {
-        id: 2,
-        productImg: [
-          {
-            id: 2,
-            url: 'https://image.osulloc.com/upload/kr/ko/adminImage/NK/UF/304_20221114150238508QK.png',
-          },
-
-          {
-            id: 1,
-            url: 'https://image.osulloc.com/upload/kr/ko/adminImage/HW/AQ/304_20220921131344082JD.png',
-          },
-        ],
-        category: '과자 세트',
-        price: 41000,
-        // originalPrice: 10000,
-        // discountRate: 70,
-        likeNumber: 123,
-        reviewNumber: 456,
-        isNew: false,
-        quantity: 10,
-        isLike: false,
-        name: '과자 세트',
-      },
-      {
-        id: 3,
-        productImg: [
-          {
-            id: 2,
-            url: 'https://image.osulloc.com/upload/kr/ko/adminImage/NK/UF/304_20221114150238508QK.png',
-          },
-
-          {
-            id: 1,
-            url: 'https://image.osulloc.com/upload/kr/ko/adminImage/HW/AQ/304_20220921131344082JD.png',
-          },
-        ],
-        category: '티 제품',
-        price: 27000,
-        // originalPrice: 30000,
-        // discountRate: 10,
-        likeNumber: 77,
-        reviewNumber: 107,
-        isNew: true,
-        quantity: 1,
-        isLike: true,
-        name: '우롱차',
-      },
-      {
-        id: 4,
-        productImg: [
-          {
-            id: 2,
-            url: 'https://image.osulloc.com/upload/kr/ko/adminImage/NK/UF/304_20221114150238508QK.png',
-          },
-
-          {
-            id: 1,
-            url: 'https://image.osulloc.com/upload/kr/ko/adminImage/HW/AQ/304_20220921131344082JD.png',
-          },
-        ],
-        category: '티 제품',
-        price: 27000,
-        originalPrice: 30000,
-        discountRate: 10,
-        likeNumber: 77,
-        reviewNumber: 107,
-        isNew: true,
-        quantity: 3,
-        isLike: true,
-        name: '우롱차',
-      },
-      {
-        id: 5,
-        productImg: [
-          {
-            id: 2,
-            url: 'https://image.osulloc.com/upload/kr/ko/adminImage/NK/UF/304_20221114150238508QK.png',
-          },
-
-          {
-            id: 1,
-            url: 'https://image.osulloc.com/upload/kr/ko/adminImage/HW/AQ/304_20220921131344082JD.png',
-          },
-        ],
-        category: '티 제품',
-        price: 27000,
-        // originalPrice: 30000,
-        // discountRate: 10,
-        likeNumber: 77,
-        reviewNumber: 107,
-        isNew: true,
-        quantity: 0,
-        isLike: true,
-        name: '우롱차',
-      },
-      {
-        id: 6,
-        productImg: [
-          {
-            id: 2,
-            url: 'https://image.osulloc.com/upload/kr/ko/adminImage/NK/UF/304_20221114150238508QK.png',
-          },
-
-          {
-            id: 1,
-            url: 'https://image.osulloc.com/upload/kr/ko/adminImage/HW/AQ/304_20220921131344082JD.png',
-          },
-        ],
-        category: '티 제품',
-        price: 27000,
-        originalPrice: 30000,
-        discountRate: 10,
-        likeNumber: 77,
-        reviewNumber: 107,
-        isNew: false,
-        quantity: 0,
-        isLike: true,
-        name: '우롱차',
-      },
-      {
-        id: 7,
-        productImg: [
-          {
-            id: 2,
-            url: 'https://image.osulloc.com/upload/kr/ko/adminImage/NK/UF/304_20221114150238508QK.png',
-          },
-
-          {
-            id: 1,
-            url: 'https://image.osulloc.com/upload/kr/ko/adminImage/HW/AQ/304_20220921131344082JD.png',
-          },
-        ],
-        category: '티 제품',
-        price: 27000,
-        originalPrice: 30000,
-        discountRate: 10,
-        likeNumber: 77,
-        reviewNumber: 107,
-        isNew: false,
-        quantity: 0,
-        isLike: true,
-        name: '우롱차',
-      },
-      {
-        id: 8,
-        productImg: [
-          {
-            id: 2,
-            url: 'https://image.osulloc.com/upload/kr/ko/adminImage/NK/UF/304_20221114150238508QK.png',
-          },
-
-          {
-            id: 1,
-            url: 'https://image.osulloc.com/upload/kr/ko/adminImage/HW/AQ/304_20220921131344082JD.png',
-          },
-        ],
-        category: '티 제품',
-        price: 27000,
-        originalPrice: 30000,
-        discountRate: 10,
-        likeNumber: 77,
-        reviewNumber: 107,
-        isNew: true,
-        quantity: 0,
-        isLike: true,
-        name: '우롱차',
-      },
-      {
-        id: 9,
-        productImg: [
-          {
-            id: 2,
-            url: 'https://image.osulloc.com/upload/kr/ko/adminImage/NK/UF/304_20221114150238508QK.png',
-          },
-
-          {
-            id: 1,
-            url: 'https://image.osulloc.com/upload/kr/ko/adminImage/HW/AQ/304_20220921131344082JD.png',
-          },
-        ],
-        category: '티 제품',
-        price: 27000,
-        originalPrice: 30000,
-        discountRate: 10,
-        likeNumber: 77,
-        reviewNumber: 107,
-        isNew: true,
-        quantity: 0,
-        isLike: true,
-        name: '우롱차',
-      },
-    ],
-    productCount: 150,
-  };
-
-  const [dataList, setDataList] = useState({});
+  const [dataList, setDataList] = useState([]);
   const category = searchParams.get('category');
   const sort = searchParams.get('sort');
 
-  const getList = async () => {
-    return await fetch(
-      `${BASE_API}/products/bestProducts${window.location.search}`,
-      {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          authorization: window.localStorage.getItem('token'),
-        },
+  const getList = () => {
+    const fileName =
+      category == '1'
+        ? 'bestData.json'
+        : sort != 'review'
+        ? 'weeklyBestData.json'
+        : 'weeklyBestDataReview.json';
+
+    fetch(`${BASE_API}/products/bestProducts/${fileName}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        authorization: window.localStorage.getItem('token'),
       },
-    )
+    })
       .then(res => res.json())
       .then(data => {
         setDataList(data);
       });
   };
 
-  const postCart = async id => {
+  const postCart = data => {
     if (!window.localStorage.getItem('token')) {
       alert('로그인을 해주세요.');
       return;
     }
 
-    if (window.confirm('장바구니에 담으시겠습니까?')) {
-      const response = await fetch(`${BASE_API}/carts`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          authorization: window.localStorage.getItem('token'),
-        },
-        body: JSON.stringify({ productId: id, quantity: 1 }),
-      });
+    const cartListData = {
+      id: data.id,
+      name: data.name,
+      img: data.productImg[1].url,
+      price: data.price,
+      quantity: 1,
+    };
 
-      if (response.ok) {
-        window.location.reload();
-      }
+    const storedCartList =
+      JSON.parse(window.localStorage.getItem('localCartList')) || [];
+
+    const isDuplicate = storedCartList.some(
+      item => item.id === cartListData.id,
+    );
+
+    if (!isDuplicate) {
+      storedCartList.push(cartListData);
+
+      window.localStorage.setItem(
+        'localCartList',
+        JSON.stringify(storedCartList),
+      );
+      alert('장바구니에 담겼습니다!');
+      window.location.reload();
+    } else {
+      alert('이미 담긴 상품이에요');
     }
   };
+
+  // const postCart = async id => {
+  //   if (!window.localStorage.getItem('token')) {
+  //     alert('로그인을 해주세요.');
+  //     return;
+  //   }
+
+  //   if (window.confirm('장바구니에 담으시겠습니까?')) {
+  //     const response = await fetch(`${BASE_API}/carts`, {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //         authorization: window.localStorage.getItem('token'),
+  //       },
+  //       body: JSON.stringify({ productId: id, quantity: 1 }),
+  //     });
+
+  //     if (response.ok) {
+  //       window.location.reload();
+  //     }
+  //   }
+  // };
 
   useEffect(() => {
     getList();
@@ -430,7 +246,11 @@ const BestProductList = () => {
       </div>
       <div className="container listContainer">
         <div className="containerInside">
-          <BestProductListContainer data={dataList.data} onClick={postCart} />
+          {Object.keys(dataList).length > 0 ? (
+            <BestProductListContainer data={dataList} onClick={postCart} />
+          ) : (
+            <div className="noDataMessage">데이터가 없습니다.</div>
+          )}
         </div>
       </div>
     </div>

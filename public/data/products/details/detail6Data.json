@@ -1,0 +1,17 @@
+{
+  "message": "querySuccess",
+  "data": {
+    "name": "삼다 꿀배 티",
+    "price": 53300,
+    "description": "달큰한 배향이 달빛처럼 은은하게 감도는 후발효차를 소중한 사람에게 선물해보세요.",
+    "provideBag": true,
+    "packageService": true,
+    "categoryName": "티 세트",
+    "categoryId": 1,
+    "productImage": "/images/tea/tea11.jpg",
+    "rating": "4.8",
+    "isNew": true,
+    "quantity": 1,
+    "id": 1
+  }
+}

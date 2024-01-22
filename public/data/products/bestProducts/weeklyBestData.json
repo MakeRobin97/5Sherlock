@@ -1,0 +1,172 @@
+[
+  {
+    "id": 2,
+    "productImg": [
+      {
+        "id": 1,
+        "url": "./images/tea/tea3.jpg"
+      },
+      {
+        "id": 2,
+        "url": "./images/tea/tea4.jpg"
+      }
+    ],
+    "category": "과자 세트",
+    "price": 20000,
+    "likeNumber": 123,
+    "reviewNumber": 456,
+    "isNew": false,
+    "quantity": 10,
+    "isLike": false,
+    "name": "그린티 라떼 더블샷"
+  },
+  {
+    "id": 4,
+    "productImg": [
+      {
+        "id": 1,
+        "url": "./images/tea/tea7.jpg"
+      },
+      {
+        "id": 2,
+        "url": "./images/tea/tea8.jpg"
+      }
+    ],
+    "category": "티 제품",
+    "price": 21600,
+    "likeNumber": 77,
+    "reviewNumber": 107,
+    "isNew": true,
+    "quantity": 3,
+    "isLike": true,
+    "name": "삼다연 오리지널 밀크티"
+  },
+  {
+    "id": 6,
+    "productImg": [
+      {
+        "id": 1,
+        "url": "./images/tea/tea11.jpg"
+      },
+      {
+        "id": 2,
+        "url": "./images/tea/tea12.jpg"
+      }
+    ],
+    "category": "티 제품",
+    "price": 53300,
+    "likeNumber": 77,
+    "reviewNumber": 107,
+    "isNew": false,
+    "quantity": 0,
+    "isLike": true,
+    "name": "삼다 꿀배 티"
+  },
+  {
+    "id": 8,
+    "productImg": [
+      {
+        "id": 1,
+        "url": "./images/tea/tea15.jpg"
+      },
+      {
+        "id": 2,
+        "url": "./images/tea/tea16.jpg"
+      }
+    ],
+    "category": "티 제품",
+    "price": 27000,
+    "likeNumber": 77,
+    "reviewNumber": 107,
+    "isNew": true,
+    "quantity": 0,
+    "isLike": true,
+    "name": "가루 녹차"
+  },
+  {
+    "id": 10,
+    "productImg": [
+      {
+        "id": 1,
+        "url": "./images/tea/tea19.jpg"
+      },
+      {
+        "id": 2,
+        "url": "./images/tea/tea20.jpg"
+      }
+    ],
+    "category": "티 제품",
+    "price": 21600,
+    "originalPrice": 27000,
+    "discountRate": 20,
+    "likeNumber": 77,
+    "reviewNumber": 107,
+    "isNew": true,
+    "quantity": 1,
+    "isLike": true,
+    "name": "웨딩 그린티 10입"
+  },
+  {
+    "id": 12,
+    "productImg": [
+      {
+        "id": 1,
+        "url": "./images/tea/tea23.jpg"
+      },
+      {
+        "id": 2,
+        "url": "./images/tea/tea24.jpg"
+      }
+    ],
+    "category": "티 제품",
+    "price": 45750,
+    "likeNumber": 77,
+    "reviewNumber": 107,
+    "isNew": true,
+    "quantity": 1,
+    "isLike": true,
+    "name": "레드파파야 블랙티 3입"
+  },
+  {
+    "id": 14,
+    "productImg": [
+      {
+        "id": 1,
+        "url": "./images/tea/tea27.jpg"
+      },
+      {
+        "id": 2,
+        "url": "./images/tea/tea28.jpg"
+      }
+    ],
+    "category": "과자 세트",
+    "price": 75750,
+    "likeNumber": 123,
+    "reviewNumber": 456,
+    "isNew": false,
+    "quantity": 10,
+    "isLike": false,
+    "name": "시그니처 얼그레이 10입"
+  },
+  {
+    "id": 16,
+    "productImg": [
+      {
+        "id": 1,
+        "url": "./images/tea/tea31.jpg"
+      },
+      {
+        "id": 2,
+        "url": "./images/tea/tea32.jpg"
+      }
+    ],
+    "category": "티 제품",
+    "price": 21000,
+    "likeNumber": 77,
+    "reviewNumber": 107,
+    "isNew": true,
+    "quantity": 3,
+    "isLike": true,
+    "name": "콤부차 깔라망고 30입"
+  }
+]
