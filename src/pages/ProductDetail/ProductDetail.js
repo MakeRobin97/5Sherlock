@@ -103,7 +103,7 @@ const ProductDetail = () => {
     const cartListData = {
       id: data.id,
       name: data.name,
-      img: data.productImage,
+      img: data.img,
       price: data.price,
       quantity: productCount,
     };
@@ -186,10 +186,7 @@ const ProductDetail = () => {
                     ? '신제품'
                     : ''
                 }`}</p>
-                <img
-                  src={`${data.productImage}`}
-                  alt="제품상세 시크릿 티세트 이미지"
-                />
+                <img src={`${data.img}`} alt="제품상세 시크릿 티세트 이미지" />
               </div>
               <div className="relationTo">
                 <ul>

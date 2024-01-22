@@ -10,7 +10,7 @@
     "packageService": true,
     "categoryName": "티 세트",
     "categoryId": 1,
-    "productImage": "/images/tea/tea17.jpg",
+    "img": "/images/tea/tea17.jpg",
     "rating": "4.8",
     "isNew": true,
     "quantity": 1,

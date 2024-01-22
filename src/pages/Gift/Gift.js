@@ -307,7 +307,7 @@ const Gift = () => {
                 <li key={item.id}>
                   <div className="productImgWrapper">
                     <div className="productImg">
-                      <img src={item.productImage} alt="주문상품" />
+                      <img src={item.img} alt="주문상품" />
                     </div>
                     <div className="name">{item.name}</div>
                   </div>
