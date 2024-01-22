@@ -13,8 +13,6 @@ const ProductListContainer = ({ data, onClick }) => {
   };
 
   const clickLike = (id, isLike) => {
-    console.log(id);
-    console.log(isLike);
     if (!localStorage.getItem('accessToken')) {
       return alert('로그인 해주세요');
     }

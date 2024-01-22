@@ -78,7 +78,6 @@ const SignUp = () => {
   };
 
   // const handleSignUp = e => {
-  //   console.log('사인업');
   //   fetch(`${BASE_API}/users/signUp`, {
   //     method: 'POST',
   //     headers: {
@@ -95,7 +94,6 @@ const SignUp = () => {
   //       return res.json();
   //     })
   //     .then(data => {
-  //       console.log(123);
   //       if (data.message === 'userCreated') {
   //         navigate('/login');
   //       } else {

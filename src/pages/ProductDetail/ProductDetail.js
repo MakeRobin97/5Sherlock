@@ -165,7 +165,6 @@ const ProductDetail = () => {
   };
 
   if (Object.keys(data).length === 0) return null;
-  console.log(data);
 
   const goGift = () => {
     window.localStorage.setItem('localGiftList', JSON.stringify([data]));
@@ -454,7 +453,6 @@ const ProductDetail = () => {
                 className="btnClose"
                 onClick={() => {
                   postCart(data.id);
-                  // console.log(`데이터아이디: ${data.id}`);
                   goCart();
                 }}
               >

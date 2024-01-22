@@ -48,7 +48,6 @@ const Gift = () => {
 
   const saveUserInfo = event => {
     const { name, value } = event.target;
-    console.log(event.target);
     setUserInfo({ ...userInfo, [name]: value });
   };
 
@@ -111,8 +110,6 @@ const Gift = () => {
     (total, item) => total + item.price * item.quantity,
     0,
   );
-
-  console.log(userInfo);
 
   return (
     <div className="gift">

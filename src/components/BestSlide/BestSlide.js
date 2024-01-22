@@ -11,7 +11,7 @@ const BestSlide = ({ data, onClick }) => {
   const next = useCallback(() => slickRef.current.slickNext(), []);
 
   const navigate = useNavigate();
-  console.log(data);
+
   const settings = {
     arrows: true,
     dots: false, // 페이지 인디케이터 표시 여부

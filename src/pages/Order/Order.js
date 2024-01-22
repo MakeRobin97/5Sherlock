@@ -75,8 +75,6 @@ const Order = () => {
     0,
   );
 
-  console.log(userInfo);
-
   return (
     <div className="order">
       <div className="orderInner">

@@ -151,7 +151,6 @@ const ProductList = () => {
 
     if (!product_type) {
       searchParams.set('product_type', param);
-      console.log(param);
       setSearchParams(searchParams);
       return;
     }

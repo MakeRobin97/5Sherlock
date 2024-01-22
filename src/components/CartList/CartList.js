@@ -47,7 +47,6 @@ const CartList = ({
     }
   }
 
-  console.log(cartList);
   return (
     <>
       {cartList.map(item => (
