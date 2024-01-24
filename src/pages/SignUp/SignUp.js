@@ -117,8 +117,6 @@ const SignUp = () => {
     password === confirmPassword &&
     isChecked;
 
-  console.log(joinUserInfo);
-
   return (
     <div className="signUp">
       <header className="header">

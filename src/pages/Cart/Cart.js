@@ -93,7 +93,7 @@ const Cart = () => {
     }
 
     const saveData = data.filter(item => checkItems.includes(item.id));
-    window.localStorage.setItem('localOrderList', JSON.stringify(saveData));
+    window.localStorage.setItem('localGiftList', JSON.stringify(saveData));
     navigate('/gift');
   };
 
