@@ -6,11 +6,11 @@
       "productImg": [
         {
           "id": 1,
-          "url": "./images/tea/tea25.jpg"
+          "url": "./images/tea/tea25.webp"
         },
         {
           "id": 2,
-          "url": "./images/tea/tea26.jpg"
+          "url": "./images/tea/tea26.webp"
         }
       ],
       "category": "티 제품",
@@ -27,11 +27,11 @@
       "productImg": [
         {
           "id": 1,
-          "url": "./images/tea/tea27.jpg"
+          "url": "./images/tea/tea27.webp"
         },
         {
           "id": 2,
-          "url": "./images/tea/tea28.jpg"
+          "url": "./images/tea/tea28.webp"
         }
       ],
       "category": "과자 세트",
@@ -48,11 +48,11 @@
       "productImg": [
         {
           "id": 1,
-          "url": "./images/tea/tea29.jpg"
+          "url": "./images/tea/tea29.webp"
         },
         {
           "id": 2,
-          "url": "./images/tea/tea30.jpg"
+          "url": "./images/tea/tea30.webp"
         }
       ],
       "category": "티 제품",
@@ -69,11 +69,11 @@
       "productImg": [
         {
           "id": 1,
-          "url": "./images/tea/tea31.jpg"
+          "url": "./images/tea/tea31.webp"
         },
         {
           "id": 2,
-          "url": "./images/tea/tea32.jpg"
+          "url": "./images/tea/tea32.webp"
         }
       ],
       "category": "티 제품",

@@ -4,11 +4,11 @@
     "productImg": [
       {
         "id": 1,
-        "url": "./images/tea/tea1.jpg"
+        "url": "./images/tea/tea1.webp"
       },
       {
         "id": 2,
-        "url": "./images/tea/tea2.jpg"
+        "url": "./images/tea/tea2.webp"
       }
     ],
     "category": "티 제품",
@@ -27,11 +27,11 @@
     "productImg": [
       {
         "id": 1,
-        "url": "./images/tea/tea5.jpg"
+        "url": "./images/tea/tea5.webp"
       },
       {
         "id": 2,
-        "url": "./images/tea/tea6.jpg"
+        "url": "./images/tea/tea6.webp"
       }
     ],
     "category": "티 제품",
@@ -48,11 +48,11 @@
     "productImg": [
       {
         "id": 1,
-        "url": "./images/tea/tea9.jpg"
+        "url": "./images/tea/tea9.webp"
       },
       {
         "id": 2,
-        "url": "./images/tea/tea10.jpg"
+        "url": "./images/tea/tea10.webp"
       }
     ],
     "category": "티 제품",
@@ -71,11 +71,11 @@
     "productImg": [
       {
         "id": 1,
-        "url": "./images/tea/tea13.jpg"
+        "url": "./images/tea/tea13.webp"
       },
       {
         "id": 2,
-        "url": "./images/tea/tea14.jpg"
+        "url": "./images/tea/tea14.webp"
       }
     ],
     "category": "티 제품",
@@ -94,11 +94,11 @@
     "productImg": [
       {
         "id": 1,
-        "url": "./images/tea/tea17.jpg"
+        "url": "./images/tea/tea17.webp"
       },
       {
         "id": 2,
-        "url": "./images/tea/tea18.jpg"
+        "url": "./images/tea/tea18.webp"
       }
     ],
     "category": "티 제품",
@@ -115,11 +115,11 @@
     "productImg": [
       {
         "id": 1,
-        "url": "./images/tea/tea21.jpg"
+        "url": "./images/tea/tea21.webp"
       },
       {
         "id": 2,
-        "url": "./images/tea/tea22.jpg"
+        "url": "./images/tea/tea22.webp"
       }
     ],
     "category": "티 제품",
@@ -136,11 +136,11 @@
     "productImg": [
       {
         "id": 1,
-        "url": "./images/tea/tea25.jpg"
+        "url": "./images/tea/tea25.webp"
       },
       {
         "id": 2,
-        "url": "./images/tea/tea26.jpg"
+        "url": "./images/tea/tea26.webp"
       }
     ],
     "category": "티 제품",
@@ -157,11 +157,11 @@
     "productImg": [
       {
         "id": 1,
-        "url": "./images/tea/tea29.jpg"
+        "url": "./images/tea/tea29.webp"
       },
       {
         "id": 2,
-        "url": "./images/tea/tea30.jpg"
+        "url": "./images/tea/tea30.webp"
       }
     ],
     "category": "티 제품",

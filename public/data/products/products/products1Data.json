@@ -6,11 +6,11 @@
       "productImg": [
         {
           "id": 1,
-          "url": "./images/tea/tea1.jpg"
+          "url": "./images/tea/tea1.webp"
         },
         {
           "id": 2,
-          "url": "./images/tea/tea2.jpg"
+          "url": "./images/tea/tea2.webp"
         }
       ],
       "category": "티 제품",
@@ -29,11 +29,11 @@
       "productImg": [
         {
           "id": 1,
-          "url": "./images/tea/tea3.jpg"
+          "url": "./images/tea/tea3.webp"
         },
         {
           "id": 2,
-          "url": "./images/tea/tea4.jpg"
+          "url": "./images/tea/tea4.webp"
         }
       ],
       "category": "과자 세트",
@@ -50,11 +50,11 @@
       "productImg": [
         {
           "id": 1,
-          "url": "./images/tea/tea5.jpg"
+          "url": "./images/tea/tea5.webp"
         },
         {
           "id": 2,
-          "url": "./images/tea/tea6.jpg"
+          "url": "./images/tea/tea6.webp"
         }
       ],
       "category": "티 제품",
@@ -71,11 +71,11 @@
       "productImg": [
         {
           "id": 1,
-          "url": "./images/tea/tea7.jpg"
+          "url": "./images/tea/tea7.webp"
         },
         {
           "id": 2,
-          "url": "./images/tea/tea8.jpg"
+          "url": "./images/tea/tea8.webp"
         }
       ],
       "category": "티 제품",
@@ -92,11 +92,11 @@
       "productImg": [
         {
           "id": 1,
-          "url": "./images/tea/tea9.jpg"
+          "url": "./images/tea/tea9.webp"
         },
         {
           "id": 2,
-          "url": "./images/tea/tea10.jpg"
+          "url": "./images/tea/tea10.webp"
         }
       ],
       "category": "티 제품",
@@ -115,11 +115,11 @@
       "productImg": [
         {
           "id": 1,
-          "url": "./images/tea/tea11.jpg"
+          "url": "./images/tea/tea11.webp"
         },
         {
           "id": 2,
-          "url": "./images/tea/tea12.jpg"
+          "url": "./images/tea/tea12.webp"
         }
       ],
       "category": "티 제품",
@@ -136,11 +136,11 @@
       "productImg": [
         {
           "id": 1,
-          "url": "./images/tea/tea13.jpg"
+          "url": "./images/tea/tea13.webp"
         },
         {
           "id": 2,
-          "url": "./images/tea/tea14.jpg"
+          "url": "./images/tea/tea14.webp"
         }
       ],
       "category": "티 제품",
@@ -159,11 +159,11 @@
       "productImg": [
         {
           "id": 1,
-          "url": "./images/tea/tea15.jpg"
+          "url": "./images/tea/tea15.webp"
         },
         {
           "id": 2,
-          "url": "./images/tea/tea16.jpg"
+          "url": "./images/tea/tea16.webp"
         }
       ],
       "category": "티 제품",
@@ -180,11 +180,11 @@
       "productImg": [
         {
           "id": 1,
-          "url": "./images/tea/tea17.jpg"
+          "url": "./images/tea/tea17.webp"
         },
         {
           "id": 2,
-          "url": "./images/tea/tea18.jpg"
+          "url": "./images/tea/tea18.webp"
         }
       ],
       "category": "티 제품",
@@ -201,11 +201,11 @@
       "productImg": [
         {
           "id": 1,
-          "url": "./images/tea/tea19.jpg"
+          "url": "./images/tea/tea19.webp"
         },
         {
           "id": 2,
-          "url": "./images/tea/tea20.jpg"
+          "url": "./images/tea/tea20.webp"
         }
       ],
       "category": "티 제품",
@@ -224,11 +224,11 @@
       "productImg": [
         {
           "id": 1,
-          "url": "./images/tea/tea21.jpg"
+          "url": "./images/tea/tea21.webp"
         },
         {
           "id": 2,
-          "url": "./images/tea/tea22.jpg"
+          "url": "./images/tea/tea22.webp"
         }
       ],
       "category": "티 제품",
@@ -245,11 +245,11 @@
       "productImg": [
         {
           "id": 1,
-          "url": "./images/tea/tea23.jpg"
+          "url": "./images/tea/tea23.webp"
         },
         {
           "id": 2,
-          "url": "./images/tea/tea24.jpg"
+          "url": "./images/tea/tea24.webp"
         }
       ],
       "category": "티 제품",

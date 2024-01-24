@@ -6,11 +6,11 @@ import BASE_API from '../../config';
 
 const Gift = () => {
   const slides = [
-    { url: './images/gift/gift1.jpg', title: 'gift1' },
-    { url: './images/gift/gift2.jpg', title: 'gift2' },
-    { url: './images/gift/gift3.jpg', title: 'gift3' },
-    { url: './images/gift/gift4.jpg', title: 'gift4' },
-    { url: './images/gift/gift5.jpg', title: 'gift5' },
+    { url: './images/gift/gift1.webp', title: 'gift1' },
+    { url: './images/gift/gift2.webp', title: 'gift2' },
+    { url: './images/gift/gift3.webp', title: 'gift3' },
+    { url: './images/gift/gift4.webp', title: 'gift4' },
+    { url: './images/gift/gift5.webp', title: 'gift5' },
   ];
 
   const navigate = useNavigate();
@@ -122,31 +122,31 @@ const Gift = () => {
             <div className="cardList">
               <img
                 className={`cardSingle ${cardNumber === 0 ? 'selected' : ''}`}
-                src="/images/gift/gift1.jpg"
+                src="/images/gift/gift1.webp"
                 alt="cardOne"
                 onClick={() => goCard(0)}
               />
               <img
                 className={`cardSingle ${cardNumber === 1 ? 'selected' : ''}`}
-                src="/images/gift/gift2.jpg"
+                src="/images/gift/gift2.webp"
                 alt="cardTwo"
                 onClick={() => goCard(1)}
               />
               <img
                 className={`cardSingle ${cardNumber === 2 ? 'selected' : ''}`}
-                src="/images/gift/gift3.jpg"
+                src="/images/gift/gift3.webp"
                 alt="cardThree"
                 onClick={() => goCard(2)}
               />
               <img
                 className={`cardSingle ${cardNumber === 3 ? 'selected' : ''}`}
-                src="/images/gift/gift4.jpg"
+                src="/images/gift/gift4.webp"
                 alt="cardFour"
                 onClick={() => goCard(3)}
               />
               <img
                 className={`cardSingle ${cardNumber === 4 ? 'selected' : ''}`}
-                src="/images/gift/gift5.jpg"
+                src="/images/gift/gift5.webp"
                 alt="cardFive"
                 onClick={() => goCard(4)}
               />
@@ -162,27 +162,27 @@ const Gift = () => {
                 >
                   <img
                     className="cardPic"
-                    src={`/images/gift/gift1.jpg`}
+                    src={`/images/gift/gift1.webp`}
                     alt="cardPic"
                   />
                   <img
                     className="cardPic"
-                    src={`/images/gift/gift2.jpg`}
+                    src={`/images/gift/gift2.webp`}
                     alt="cardPic"
                   />
                   <img
                     className="cardPic"
-                    src={`/images/gift/gift3.jpg`}
+                    src={`/images/gift/gift3.webp`}
                     alt="cardPic"
                   />
                   <img
                     className="cardPic"
-                    src={`/images/gift/gift4.jpg`}
+                    src={`/images/gift/gift4.webp`}
                     alt="cardPic"
                   />
                   <img
                     className="cardPic"
-                    src={`/images/gift/gift5.jpg`}
+                    src={`/images/gift/gift5.webp`}
                     alt="cardPic"
                   />
                 </div>
