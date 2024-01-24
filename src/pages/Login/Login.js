@@ -51,16 +51,19 @@ const Login = () => {
 
   const handleLogin = e => {
     e.preventDefault();
-    localStorage.setItem('token', 'testoken');
-    localStorage.setItem(
-      'info',
-      JSON.stringify({
-        name: '박로빈',
-        email: email,
-        phone: '010-8908-4135',
-      }),
-    );
-    navigate('/');
+
+    if (!window.localStorage.getItem('signUpInfo')) {
+      return alert('가입되어 있지 않은 이메일입니다.');
+    }
+
+    const signUpInfo = JSON.parse(window.localStorage.getItem('signUpInfo'));
+
+    if (userInfo.email !== signUpInfo.email) {
+      alert('가입되어 있지 않은 이메일입니다.');
+    } else {
+      localStorage.setItem('token', 'testoken');
+      navigate('/');
+    }
   };
 
   const clearErrorMessage = () => {

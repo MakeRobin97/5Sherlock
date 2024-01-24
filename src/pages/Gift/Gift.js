@@ -66,7 +66,7 @@ const Gift = () => {
   };
 
   const getUser = () => {
-    const infoData = JSON.parse(window.localStorage.getItem('info'));
+    const infoData = JSON.parse(window.localStorage.getItem('signUpInfo'));
     setUserData(infoData);
   };
 
@@ -80,10 +80,10 @@ const Gift = () => {
       return;
     }
 
-    const totalmyPhone = userData.phone;
-    const parts = totalmyPhone.split('-');
-    const a = parts[0];
-    const b = parts.slice(1).join('-');
+    const totalmyPhone = userData.phoneNumber;
+    // const parts = totalmyPhone.split('-');
+    const a = totalmyPhone.substring(0, 3);
+    const b = totalmyPhone.substring(3);
 
     setUserInfo({
       letter: '',

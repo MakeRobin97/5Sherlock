@@ -38,7 +38,7 @@ const Order = () => {
   };
 
   const getUser = () => {
-    const infoData = JSON.parse(window.localStorage.getItem('info'));
+    const infoData = JSON.parse(window.localStorage.getItem('signUpInfo'));
     setUserData(infoData);
   };
 
@@ -54,7 +54,7 @@ const Order = () => {
     setUserInfo({
       customerName: userData.name,
       customerEmail: userData.email,
-      customerPhoneNumber: userData.phone,
+      customerPhoneNumber: userData.phoneNumber,
       shipperName: '',
       receiverName: '',
       receiverPhoneNumber: '',

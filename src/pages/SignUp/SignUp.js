@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useInRouterContext, useNavigate } from 'react-router-dom';
 import Input from '../../components/Input/Input';
 import CheckBox from '../../components/CheckBox/CheckBox';
 import Terms from '../../components/Terms/Terms';
@@ -74,6 +74,11 @@ const SignUp = () => {
 
   const handleSignUp = () => {
     alert('회원가입완료!');
+    const exData = joinUserInfo;
+    delete exData.password;
+    delete exData.confirmPassword;
+    window.localStorage.setItem('signUpInfo', JSON.stringify(exData));
+
     navigate('/login');
   };
 
@@ -111,6 +116,9 @@ const SignUp = () => {
     pwReg.test(password) &&
     password === confirmPassword &&
     isChecked;
+
+  console.log(joinUserInfo);
+
   return (
     <div className="signUp">
       <header className="header">

@@ -10,7 +10,11 @@ const Cart = () => {
 
   const getCart = () => {
     const result = JSON.parse(window.localStorage.getItem('localCartList'));
-    setData(result);
+    if (!result) {
+      setData([]);
+    } else {
+      setData(result);
+    }
   };
 
   const minusQuantityFunc = id => {
@@ -39,6 +43,15 @@ const Cart = () => {
     } else {
       setCheckItems(checkItems.filter(el => el !== id));
     }
+  };
+
+  const removeCart = id => {
+    setData(data.filter(item => item.id !== id));
+    window.localStorage.setItem(
+      'localCartList',
+      JSON.stringify(data.filter(item => item.id !== id)),
+    );
+    window.location.reload();
   };
 
   // 체크박스 전체 선택
@@ -73,14 +86,25 @@ const Cart = () => {
     navigate('/order');
   };
 
+  const saveGift = () => {
+    if (checkItems.length === 0) {
+      alert('최소 1개의 상품은 담아주세요.');
+      return;
+    }
+
+    const saveData = data.filter(item => checkItems.includes(item.id));
+    window.localStorage.setItem('localOrderList', JSON.stringify(saveData));
+    navigate('/gift');
+  };
+
   useEffect(() => {
     getCart();
   }, []);
 
-  const totalPrice = data.reduce(
-    (total, item) => total + item.price * item.quantity,
-    0,
-  );
+  const totalPrice =
+    data.length > 0
+      ? data.reduce((total, item) => total + item.price * item.quantity, 0)
+      : 0;
 
   return (
     <div className="cart">
@@ -88,6 +112,7 @@ const Cart = () => {
         <header className="header">
           <div className="pageTitle">장바구니</div>
         </header>
+
         <div className="cartCheck">
           <div className="checkAllBox">
             <input
@@ -97,6 +122,7 @@ const Cart = () => {
               onChange={e => handleAllCheck(e.target.checked)}
               checked={data.length === checkItems.length}
             />
+
             <label htmlFor="checkAll">전체선택</label>
           </div>
         </div>
@@ -144,6 +170,14 @@ const Cart = () => {
                 <div className="price">
                   {(d.price * d.quantity).toLocaleString('ko-KR')}원
                 </div>
+                <img
+                  className="removeBtn"
+                  src="/images/cancel.png"
+                  alt="removeBtn"
+                  onClick={() => {
+                    removeCart(d.id);
+                  }}
+                />
               </div>
             ))}
           </div>
@@ -155,7 +189,7 @@ const Cart = () => {
           </div>
         </div>
         <div className="cartBtnBox">
-          <button className="goGift" onClick={saveCart}>
+          <button className="goGift" onClick={saveGift}>
             선택상품 선물하기
           </button>
           <button className="getOptionItem" onClick={saveCart}>
